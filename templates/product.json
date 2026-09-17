@@ -947,6 +947,341 @@
     "section_aHyDYE": {
       "type": "section",
       "blocks": {
+        "group_4KxGxx": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "custom",
+            "custom_width": 50,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "accordion_mAH7Nf": {
+              "type": "accordion",
+              "name": "t:names.accordion",
+              "settings": {
+                "icon": "plus",
+                "dividers": true,
+                "divider_color": "",
+                "type_preset": "h4",
+                "background_color": "",
+                "text_color": "",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "accordion_row_AVgab8": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "What size should i buy?",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_C7GfXD": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Our shoes fit true to size. Please choose your usual size or, if you have narrow feet, select one size larger. If for any reason you wish to exchange your shoes for another size, you can do so easily thanks to our 30-day return policy.</p>",
+                        "width": "100%",
+                        "max_width": "none",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_C7GfXD"
+                  ]
+                },
+                "accordion_row_3Fjbjt": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "What is the Return Policy?",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_88JCAz": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>We offer a 30-day return policy for all purchases made through our website. If you are not satisfied with your shoes, simply contact us to start the return process.</p>",
+                        "width": "100%",
+                        "max_width": "none",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_88JCAz"
+                  ]
+                },
+                "accordion_row_4VR3jp": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "How Should I Care for My Shoes?",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_CxgzkX": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>We recommend using high-quality leather cleaning and care products to maintain the original appearance of your shoes. Avoid exposing them to high temperatures or humidity, and store them in a cool, dry place when not in use.</p>",
+                        "width": "100%",
+                        "max_width": "none",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_CxgzkX"
+                  ]
+                }
+              },
+              "block_order": [
+                "accordion_row_AVgab8",
+                "accordion_row_3Fjbjt",
+                "accordion_row_4VR3jp"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_mAH7Nf"
+          ]
+        },
+        "accordion_krJnXi": {
+          "type": "accordion",
+          "name": "t:names.accordion",
+          "settings": {
+            "icon": "plus",
+            "dividers": true,
+            "divider_color": "",
+            "type_preset": "h5",
+            "background_color": "",
+            "text_color": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "accordion_row_EGkP9Y": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "<strong>What size should I buy?</strong>",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_jckT8P": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Check our size chart above the size selector on each product page for a full fit guide. If you're between sizes, we recommend sizing up.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_jckT8P"
+              ]
+            },
+            "accordion_row_6WEGAH": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "<strong>What is the Return Policy?</strong>",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_qAwiKU": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>We offer a 30-day risk-free trial. If you're not completely happy with your purchase, contact us for a full refund.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_qAwiKU"
+              ]
+            },
+            "accordion_row_N8azLi": {
+              "type": "_accordion-row",
+              "settings": {
+                "heading": "<strong>How Should I Care for My Shoes?</strong>",
+                "open_by_default": false,
+                "icon": "none",
+                "width": 20
+              },
+              "blocks": {
+                "text_YE69iW": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>Wipe down with a soft, damp cloth after wear and let them air dry away from direct heat to keep them looking new for longer.</p>",
+                    "width": "100%",
+                    "max_width": "normal",
+                    "alignment": "left",
+                    "type_preset": "rte",
+                    "font": "var(--font-body--family)",
+                    "font_size": "1rem",
+                    "line_height": "normal",
+                    "letter_spacing": "normal",
+                    "case": "none",
+                    "wrap": "pretty",
+                    "text_color": "",
+                    "background": false,
+                    "background_color": "#00000026",
+                    "corner_radius": 0,
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "text_YE69iW"
+              ]
+            }
+          },
+          "block_order": [
+            "accordion_row_EGkP9Y",
+            "accordion_row_6WEGAH",
+            "accordion_row_N8azLi"
+          ]
+        },
         "text_UPKcGi": {
           "type": "text",
           "name": "t:names.heading",
@@ -998,199 +1333,13 @@
             "padding-inline-end": 0
           },
           "blocks": {}
-        },
-        "group_qa_width": {
-          "type": "group",
-          "name": "t:names.group",
-          "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "center",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "center",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 0,
-            "width": "custom",
-            "custom_width": 40,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "background_media": "none",
-            "background_color": "",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
-            "open_in_new_tab": false,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "accordion_krJnXi": {
-              "type": "accordion",
-              "name": "t:names.accordion",
-              "settings": {
-                "icon": "plus",
-                "dividers": true,
-                "divider_color": "",
-                "type_preset": "h5",
-                "background_color": "",
-                "text_color": "",
-                "border": "none",
-                "border_width": 1,
-                "border_opacity": 100,
-                "border_color": "",
-                "border_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {
-                "accordion_row_EGkP9Y": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "<strong>What size should I buy?</strong>",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {
-                    "text_jckT8P": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Check our size chart above the size selector on each product page for a full fit guide. If you're between sizes, we recommend sizing up.</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "text_color": "",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_jckT8P"
-                  ]
-                },
-                "accordion_row_6WEGAH": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "<strong>What is the Return Policy?</strong>",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {
-                    "text_qAwiKU": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>We offer a 30-day risk-free trial. If you're not completely happy with your purchase, contact us for a full refund.</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "text_color": "",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_qAwiKU"
-                  ]
-                },
-                "accordion_row_N8azLi": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "heading": "<strong>How Should I Care for My Shoes?</strong>",
-                    "open_by_default": false,
-                    "icon": "none",
-                    "width": 20
-                  },
-                  "blocks": {
-                    "text_YE69iW": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>Wipe down with a soft, damp cloth after wear and let them air dry away from direct heat to keep them looking new for longer.</p>",
-                        "width": "100%",
-                        "max_width": "normal",
-                        "alignment": "left",
-                        "type_preset": "rte",
-                        "font": "var(--font-body--family)",
-                        "font_size": "1rem",
-                        "line_height": "normal",
-                        "letter_spacing": "normal",
-                        "case": "none",
-                        "wrap": "pretty",
-                        "text_color": "",
-                        "background": false,
-                        "background_color": "#00000026",
-                        "corner_radius": 0,
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_YE69iW"
-                  ]
-                }
-              },
-              "block_order": [
-                "accordion_row_EGkP9Y",
-                "accordion_row_6WEGAH",
-                "accordion_row_N8azLi"
-              ]
-            }
-          },
-          "block_order": [
-            "accordion_krJnXi"
-          ]
         }
       },
       "block_order": [
+        "group_4KxGxx",
+        "accordion_krJnXi",
         "text_UPKcGi",
-        "text_bBWYaH",
-        "group_qa_width"
+        "text_bBWYaH"
       ],
       "name": "Questions & answers",
       "settings": {
