@@ -153,35 +153,274 @@
                   },
                   "blocks": {}
                 },
-                "price_tVjtKg": {
-                  "type": "price",
+                "price_row": {
+                  "type": "group",
+                  "name": "t:names.header",
                   "settings": {
-                    "show_sale_price_first": true,
-                    "show_installments": false,
-                    "show_tax_info": false,
-                    "type_preset": "paragraph",
-                    "width": "100%",
-                    "alignment": "left",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "text_color": "",
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": true,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 10,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "width_mobile": "fill",
+                    "custom_width_mobile": 100,
+                    "height": "fit",
+                    "custom_height": 100,
+                    "background_media": "none",
+                    "background_color": "",
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "toggle_overlay": false,
+                    "overlay_color": "#00000026",
+                    "overlay_style": "solid",
+                    "gradient_direction": "to top",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100,
+                    "border_color": "",
+                    "border_radius": 0,
+                    "link": "",
+                    "open_in_new_tab": false,
+                    "placeholder": "",
                     "padding-block-start": 4,
                     "padding-block-end": 0,
                     "padding-inline-start": 0,
                     "padding-inline-end": 0
                   },
-                  "blocks": {}
+                  "blocks": {
+                    "price_tVjtKg": {
+                      "type": "price",
+                      "settings": {
+                        "show_sale_price_first": true,
+                        "show_installments": false,
+                        "show_tax_info": false,
+                        "type_preset": "paragraph",
+                        "width": "fit-content",
+                        "alignment": "left",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1.25rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "text_color": "",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    },
+                    "save_badge": {
+                      "type": "text",
+                      "name": "t:names.text",
+                      "settings": {
+                        "text": "{% assign v = closest.product.selected_or_first_available_variant %}{% if v.compare_at_price > v.price %}{% assign pct = v.compare_at_price | minus: v.price | times: 100 | divided_by: v.compare_at_price %}Save {{ pct }}%{% endif %}",
+                        "width": "fit-content",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "custom",
+                        "font": "var(--font-body--family)",
+                        "font_size": "0.8rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "#1a7d3a",
+                        "background": true,
+                        "background_color": "#d9f2e3",
+                        "corner_radius": 20,
+                        "padding-block-start": 4,
+                        "padding-block-end": 4,
+                        "padding-inline-start": 10,
+                        "padding-inline-end": 10
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": ["price_tVjtKg", "save_badge"]
                 }
               },
               "block_order": [
                 "text_xrnftG",
-                "price_tVjtKg"
+                "price_row"
               ]
             },
             "divider_VJhene": {
+              "type": "_divider",
+              "name": "t:names.divider",
+              "settings": {
+                "thickness": 1,
+                "corner_radius": "square",
+                "divider_color": "{{ settings.color_palette.color2 }}",
+                "width_percent": 100,
+                "padding-block-start": 0,
+                "padding-block-end": 0
+              },
+              "blocks": {}
+            },
+            "trust_badges": {
+              "type": "group",
+              "name": "t:names.header",
+              "settings": {
+                "content_direction": "column",
+                "vertical_on_mobile": true,
+                "horizontal_alignment": "flex-start",
+                "vertical_alignment": "center",
+                "align_baseline": false,
+                "horizontal_alignment_flex_direction_column": "flex-start",
+                "vertical_alignment_flex_direction_column": "center",
+                "gap": 8,
+                "width": "fill",
+                "custom_width": 100,
+                "width_mobile": "fill",
+                "custom_width_mobile": 100,
+                "height": "fit",
+                "custom_height": 100,
+                "background_media": "none",
+                "background_color": "",
+                "video_position": "cover",
+                "background_image_position": "cover",
+                "toggle_overlay": false,
+                "overlay_color": "#00000026",
+                "overlay_style": "solid",
+                "gradient_direction": "to top",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "link": "",
+                "open_in_new_tab": false,
+                "placeholder": "",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {
+                "row_shipping": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100
+                  },
+                  "blocks": {
+                    "icon_shipping": {
+                      "type": "icon",
+                      "settings": { "icon": "truck", "width": 18 }
+                    },
+                    "text_shipping": {
+                      "type": "text",
+                      "settings": {
+                        "text": "Free Home Delivery via UPS",
+                        "alignment": "left",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      }
+                    }
+                  },
+                  "block_order": ["icon_shipping", "text_shipping"]
+                },
+                "row_trial": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100
+                  },
+                  "blocks": {
+                    "icon_trial": {
+                      "type": "icon",
+                      "settings": { "icon": "box", "width": 18 }
+                    },
+                    "text_trial": {
+                      "type": "text",
+                      "settings": {
+                        "text": "30-Day Risk-Free Trial",
+                        "alignment": "left",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      }
+                    }
+                  },
+                  "block_order": ["icon_trial", "text_trial"]
+                },
+                "row_guarantee": {
+                  "type": "group",
+                  "settings": {
+                    "content_direction": "row",
+                    "vertical_on_mobile": false,
+                    "horizontal_alignment": "flex-start",
+                    "vertical_alignment": "center",
+                    "align_baseline": false,
+                    "horizontal_alignment_flex_direction_column": "flex-start",
+                    "vertical_alignment_flex_direction_column": "center",
+                    "gap": 12,
+                    "width": "fill",
+                    "custom_width": 100,
+                    "video_position": "cover",
+                    "background_image_position": "cover",
+                    "border": "none",
+                    "border_width": 1,
+                    "border_opacity": 100
+                  },
+                  "blocks": {
+                    "icon_guarantee": {
+                      "type": "icon",
+                      "settings": { "icon": "star", "width": 18 }
+                    },
+                    "text_guarantee": {
+                      "type": "text",
+                      "settings": {
+                        "text": "100% Happiness Guarantee",
+                        "alignment": "left",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      }
+                    }
+                  },
+                  "block_order": ["icon_guarantee", "text_guarantee"]
+                }
+              },
+              "block_order": ["row_shipping", "row_trial", "row_guarantee"]
+            },
+            "divider_trust_badges": {
               "type": "_divider",
               "name": "t:names.divider",
               "settings": {
@@ -223,6 +462,19 @@
                 "waitForElementSelector": "",
                 "waitForElementDelay": 5
               }
+            },
+            "stock_urgency": {
+              "type": "product-inventory",
+              "settings": {
+                "inventory_threshold": 10,
+                "show_inventory_quantity": false,
+                "text_color": "#d92d20",
+                "padding-block-start": 4,
+                "padding-block-end": 4,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             },
             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
@@ -284,6 +536,84 @@
               },
               "block_order": []
             },
+            "urgency_notice": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p><strong>UPDATE:</strong> Due to high demand for our last ever Spring Sale, only 8 items remain at the current price. If you can still press \"ADD TO CART,\" the product is available. If not, we sincerely apologise.</p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.875rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "#b91c1c",
+                "background": true,
+                "background_color": "#fce8e8",
+                "corner_radius": 8,
+                "padding-block-start": 16,
+                "padding-block-end": 16,
+                "padding-inline-start": 16,
+                "padding-inline-end": 16
+              },
+              "blocks": {}
+            },
+            "accordion": {
+              "type": "accordion",
+              "settings": {},
+              "blocks": {
+                "accordion-row-size": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Size"
+                  },
+                  "blocks": {
+                    "text": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Not sure which size to pick? Check the size chart above the size selector for a full fit guide. If you're between sizes, we recommend sizing up.</p>"
+                      }
+                    }
+                  },
+                  "block_order": ["text"]
+                },
+                "accordion-row-shipping": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "Shipping information"
+                  },
+                  "blocks": {
+                    "text": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Orders ship via UPS with free home delivery. You'll receive a tracking number by email as soon as your order is on its way.</p>"
+                      }
+                    }
+                  },
+                  "block_order": ["text"]
+                },
+                "accordion-row-trial": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "30-Day Risk-Free Trial"
+                  },
+                  "blocks": {
+                    "text": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Try it for 30 days. If you're not completely happy, contact us for a full refund — no questions asked.</p>"
+                      }
+                    }
+                  },
+                  "block_order": ["text"]
+                }
+              },
+              "block_order": ["accordion-row-size", "accordion-row-shipping", "accordion-row-trial"]
+            },
             "text_aEtTtq": {
               "type": "text",
               "name": "t:names.product_description",
@@ -314,9 +644,14 @@
           "block_order": [
             "group_icgrde",
             "divider_VJhene",
+            "trust_badges",
+            "divider_trust_badges",
             "variant_picker_R3rGDr",
             "kiwi_size_chart_recommender_kiwi_sizing_rKM4wU",
+            "stock_urgency",
             "buy_buttons_eYQEYi",
+            "urgency_notice",
+            "accordion",
             "text_aEtTtq"
           ]
         }
