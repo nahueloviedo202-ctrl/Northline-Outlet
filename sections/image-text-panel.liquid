@@ -1,0 +1,510 @@
+
+
+{% liquid
+  assign focal_point_css = 'center'
+  case section.settings.focal_point
+    when 'top-left'
+      assign focal_point_css = '20% 0%'
+    when 'top'
+      assign focal_point_css = '50% 0%'
+    when 'top-right'
+      assign focal_point_css = '80% 0%'
+    when 'left'
+      assign focal_point_css = '20% 50%'
+    when 'center'
+      assign focal_point_css = '50% 50%'
+    when 'right'
+      assign focal_point_css = '80% 50%'
+    when 'bottom-left'
+      assign focal_point_css = '20% 100%'
+    when 'bottom'
+      assign focal_point_css = '50% 100%'
+    when 'bottom-right'
+      assign focal_point_css = '80% 100%'
+  endcase
+
+  assign has_custom_colors = false
+  if section.settings.panel_background_color != blank or section.settings.panel_text_color != blank
+    assign has_custom_colors = true
+  endif
+%}
+
+{%- liquid
+  if section.settings.panel_background_color != blank
+    render 'contrast-override',
+      background_color: section.settings.panel_background_color,
+      text_color: section.settings.panel_text_color,
+      border_color: section.settings.frame_color,
+      section_id: section.id
+  elsif section.settings.panel_text_color != blank
+    render 'contrast-override',
+      text_color: section.settings.panel_text_color,
+      border_color: section.settings.frame_color,
+      section_id: section.id
+  endif
+-%}
+
+<div
+  class="image-text-panel image-text-panel--pos-{{ section.settings.content_position }} image-text-panel--valign-{{ section.settings.vertical_position }}{% if section.settings.panel_framed %} image-text-panel--framed{% endif %}"
+  style="
+    --image-text-panel-min-height: {% if section.settings.section_height == 'custom' %}{{ section.settings.section_height_custom }}px{% else %}var(--section-height-{{ section.settings.section_height }}){% endif %};
+    --image-text-panel-mobile-height: {{ section.settings.image_height_mobile }}px;
+    --image-text-panel-offset: {{ section.settings.content_offset }}px;
+    --image-text-panel-width: {{ section.settings.content_width }}px;
+    --image-text-panel-focal-point: {{ focal_point_css }};
+    --image-text-panel-border-radius: {{ section.settings.border_radius }}px;
+    --image-text-panel-frame-width: {% if section.settings.panel_framed %}{{ section.settings.frame_width }}px{% else %}0px{% endif %};
+  "
+  data-testid="image-text-panel"
+>
+  <div class="image-text-panel__media">
+    {% render 'background-media',
+      background_media: section.settings.media_type,
+      background_video: section.settings.video,
+      background_video_position: 'cover',
+      background_image: section.settings.image,
+      background_image_position: 'cover',
+      placeholder: 'hero-apparel-1',
+      section: section
+    %}
+    {% if section.settings.toggle_overlay %}
+      {% render 'overlay', settings: section.settings %}
+    {% endif %}
+  </div>
+
+  <div
+    class="image-text-panel__content{% if has_custom_colors %} color-custom-{{ section.id }}{% endif %}"
+    style="{% render 'spacing-style', settings: section.settings %}"
+  >
+    {% content_for 'blocks' %}
+  </div>
+</div>
+
+{% stylesheet %}
+  .image-text-panel {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    isolation: isolate;
+    min-height: var(--image-text-panel-min-height);
+  }
+
+  .image-text-panel--pos-left {
+    justify-content: flex-start;
+  }
+
+  .image-text-panel--pos-right {
+    justify-content: flex-end;
+  }
+
+  .image-text-panel--valign-top {
+    align-items: flex-start;
+  }
+
+  .image-text-panel--valign-center {
+    align-items: center;
+  }
+
+  .image-text-panel--valign-bottom {
+    align-items: flex-end;
+  }
+
+  .image-text-panel__media {
+    position: absolute;
+    inset: 0;
+    z-index: var(--layer-base, 0);
+  }
+
+  .image-text-panel__media .background-image-container img,
+  .image-text-panel__media .background-image-container svg,
+  .image-text-panel__media .video-background {
+    object-position: var(--image-text-panel-focal-point);
+  }
+
+  .image-text-panel__content {
+    position: relative;
+    z-index: var(--layer-flat, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: var(--image-text-panel-width);
+    max-width: calc(100% - (var(--image-text-panel-offset) * 2));
+    margin: var(--image-text-panel-offset);
+    background: var(--color-background, #ffffff);
+    color: var(--color, inherit);
+    border-radius: var(--image-text-panel-border-radius);
+    box-shadow: inset 0 0 0 var(--image-text-panel-frame-width) var(--color-border, #000000);
+  }
+
+  @media screen and (max-width: 749px) {
+    .image-text-panel {
+      flex-direction: column;
+      min-height: 0;
+    }
+
+    .image-text-panel__media {
+      position: relative;
+      inset: auto;
+      height: var(--image-text-panel-mobile-height);
+    }
+
+    .image-text-panel__content {
+      width: auto;
+      max-width: none;
+      margin: 0;
+      text-align: center;
+      align-items: center;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Image with text panel",
+  "class": "section-wrapper",
+  "tag": "section",
+  "disabled_on": {
+    "groups": ["header"]
+  },
+  "blocks": [
+    {
+      "type": "@theme"
+    },
+    {
+      "type": "@app"
+    },
+    {
+      "type": "text"
+    },
+    {
+      "type": "button"
+    },
+    {
+      "type": "group"
+    }
+  ],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Media"
+    },
+    {
+      "type": "select",
+      "id": "media_type",
+      "label": "Media type",
+      "options": [
+        { "value": "image", "label": "Image" },
+        { "value": "video", "label": "Video" }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "visible_if": "{{ section.settings.media_type == 'image' }}"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Video",
+      "visible_if": "{{ section.settings.media_type == 'video' }}"
+    },
+    {
+      "type": "select",
+      "id": "focal_point",
+      "label": "Image focal point",
+      "info": "Keeps the subject of the photo in view when the image is cropped.",
+      "default": "center",
+      "visible_if": "{{ section.settings.media_type == 'image' }}",
+      "options": [
+        { "value": "top-left", "label": "Top left" },
+        { "value": "top", "label": "Top" },
+        { "value": "top-right", "label": "Top right" },
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" },
+        { "value": "bottom-left", "label": "Bottom left" },
+        { "value": "bottom", "label": "Bottom" },
+        { "value": "bottom-right", "label": "Bottom right" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "content_position",
+      "label": "Content position",
+      "default": "left",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "vertical_position",
+      "label": "Content vertical position",
+      "default": "top",
+      "options": [
+        { "value": "top", "label": "Top" },
+        { "value": "center", "label": "Center" },
+        { "value": "bottom", "label": "Bottom" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "Section height",
+      "default": "custom",
+      "options": [
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" },
+        { "value": "custom", "label": "Custom" }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "section_height_custom",
+      "label": "Custom height",
+      "min": 300,
+      "max": 900,
+      "step": 10,
+      "unit": "px",
+      "default": 550,
+      "visible_if": "{{ section.settings.section_height == 'custom' }}"
+    },
+    {
+      "type": "range",
+      "id": "content_offset",
+      "label": "Content offset from edges",
+      "min": 0,
+      "max": 120,
+      "step": 2,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "content_width",
+      "label": "Content box width",
+      "min": 240,
+      "max": 600,
+      "step": 10,
+      "unit": "px",
+      "default": 380
+    },
+    {
+      "type": "header",
+      "content": "Content box appearance"
+    },
+    {
+      "type": "color",
+      "id": "panel_background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "panel_text_color",
+      "label": "Text color",
+      "info": "Leave blank to use an automatically contrasted color."
+    },
+    {
+      "type": "checkbox",
+      "id": "panel_framed",
+      "label": "Add frame",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "frame_color",
+      "label": "Frame color",
+      "visible_if": "{{ section.settings.panel_framed }}"
+    },
+    {
+      "type": "range",
+      "id": "frame_width",
+      "label": "Frame thickness",
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 10,
+      "visible_if": "{{ section.settings.panel_framed }}"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "Corner radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Content box padding"
+    },
+    {
+      "type": "range",
+      "id": "padding-block-start",
+      "label": "Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding-block-end",
+      "label": "Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-start",
+      "label": "Left",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "padding-inline-end",
+      "label": "Right",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Image overlay"
+    },
+    {
+      "type": "checkbox",
+      "id": "toggle_overlay",
+      "label": "Darken image with an overlay",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "overlay_color",
+      "label": "Overlay color",
+      "alpha": true,
+      "default": "#00000026",
+      "visible_if": "{{ section.settings.toggle_overlay }}"
+    },
+    {
+      "type": "select",
+      "id": "overlay_style",
+      "label": "Overlay style",
+      "default": "solid",
+      "visible_if": "{{ section.settings.toggle_overlay }}",
+      "options": [
+        { "value": "solid", "label": "Solid" },
+        { "value": "gradient", "label": "Gradient" }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "gradient_direction",
+      "label": "Gradient direction",
+      "default": "to top",
+      "visible_if": "{{ section.settings.toggle_overlay and section.settings.overlay_style == 'gradient' }}",
+      "options": [
+        { "value": "to top", "label": "Up" },
+        { "value": "to bottom", "label": "Down" }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "range",
+      "id": "image_height_mobile",
+      "label": "Image height on mobile",
+      "min": 150,
+      "max": 500,
+      "step": 10,
+      "unit": "px",
+      "default": 240
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with text panel",
+      "category": "Storytelling",
+      "settings": {
+        "image": "shopify://shop_images/gwCbF.jpg",
+        "focal_point": "center",
+        "content_position": "left",
+        "vertical_position": "top",
+        "section_height": "custom",
+        "section_height_custom": 550,
+        "content_offset": 60,
+        "content_width": 380,
+        "panel_background_color": "#ffffff"
+      },
+      "blocks": {
+        "subtitle": {
+          "type": "text",
+          "name": "Subheading",
+          "settings": {
+            "text": "<p>Northline Outlet</p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "0.875rem",
+            "line_height": "normal",
+            "letter_spacing": "loose",
+            "case": "uppercase",
+            "wrap": "pretty"
+          }
+        },
+        "heading": {
+          "type": "text",
+          "name": "Heading",
+          "settings": {
+            "text": "<h3><strong>Where Style Meets Savings</strong></h3>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "h3",
+            "font": "var(--font-heading--family)"
+          }
+        },
+        "body": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "text": "<p>Northline Outlet was founded with a simple mission: to make fashion accessible to everyone. Based in the heart of the CANADA, our store offers the latest trends at unbeatable prices. From stylish everyday clothing to the best footwear for your daily life, Northline Outlet combines quality, style, and affordable prices, helping our customers look their best without breaking the bank.</p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)"
+          }
+        }
+      },
+      "block_order": ["subtitle", "heading", "body"]
+    }
+  ]
+}
+{% endschema %}
