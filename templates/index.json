@@ -388,7 +388,10 @@
       ],
       "name": "t:names.collections_grid",
       "settings": {
-        "collection_list": [],
+        "collection_list": [
+          "frontpage",
+          "collection-list"
+        ],
         "layout_type": "grid",
         "carousel_on_mobile": false,
         "columns": 4,
