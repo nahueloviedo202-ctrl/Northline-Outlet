@@ -1392,7 +1392,7 @@
         "overlay_color": "#00000026",
         "overlay_style": "solid",
         "gradient_direction": "to top",
-        "image_height_mobile": 240
+        "image_height_mobile": 350
       }
     }
   },
