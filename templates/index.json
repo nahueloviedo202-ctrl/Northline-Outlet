@@ -390,7 +390,8 @@
       "settings": {
         "collection_list": [
           "frontpage",
-          "collection-list"
+          "collection-list",
+          "sneackers"
         ],
         "layout_type": "grid",
         "carousel_on_mobile": false,
