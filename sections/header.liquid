@@ -242,8 +242,10 @@
 
   # Split navigation: first `split_menu_index` top-level links stay with the primary
   # menu, the rest render as a second menu group positioned via menu_secondary_position.
+  # Must land right before 'actions' so, within the same column, the menu group sits
+  # closest to the logo and the icons stay pinned to the outer edge.
   if section.settings.enable_split_menu
-    assign order = order | append: ',menu_secondary'
+    assign order = order | replace: ',actions', ',menu_secondary,actions'
   endif
 %}
 
