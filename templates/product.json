@@ -351,7 +351,7 @@
                 "accordion_row_CCRNky": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Return policy",
+                    "heading": "Size",
                     "open_by_default": true,
                     "icon": "none",
                     "width": 20
@@ -360,7 +360,7 @@
                     "text_CxcXrf": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our goal is for every customer to be totally satisfied with their purchase. If this isn't the case, let us know and we'll do our best to work with you to make it right.</p>",
+                        "text": "<p>Perfect fit according to your size. Order your usual size. If for any reason you need a different size, don't worry: we have a 30-day return policy for you.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -390,7 +390,7 @@
                 "accordion_row_B4bifN": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Shipping",
+                    "heading": "Shipping information",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -399,7 +399,7 @@
                     "text_HaNyMj": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>We will work quickly to ship your order as soon as possible. Once your order has shipped, you will receive an email with further information. Delivery times vary depending on your location.</p>",
+                        "text": "<p>Orders are typically processed and shipped within 1&ndash;3 days. As part of our commitment to sustainability, orders are shipped directly from the manufacturing plant.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
@@ -429,7 +429,7 @@
                 "accordion_row_CmjajJ": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Manufacturing",
+                    "heading": "30-Day Risk-Free Trial",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -438,7 +438,7 @@
                     "text_FwJgPg": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our products are manufactured both locally and globally. We carefully select our manufacturing partners to ensure our products are high quality and a fair value.</p>",
+                        "text": "<p>We love our products and believe you will too. That's why we offer a 30-Day Risk-Free Trial. If you are not satisfied with our product, we will refund your money.</p>",
                         "width": "100%",
                         "max_width": "normal",
                         "alignment": "left",
