@@ -1265,8 +1265,13 @@
     border-block: var(--header-frame-border-width, 0px) solid var(--header-frame-border-color, transparent);
   }
 
-  /* Split navigation: push the secondary menu group flush against the logo and
-     the actions/localization group flush against the page edge */
+  /* Split navigation: pull the primary menu group flush against the logo (instead
+     of the page edge), and push the secondary menu group flush against the logo
+     while the actions/localization group stays flush against the page edge */
+  #header-component[data-split-menu] .header__column--left {
+    justify-content: flex-end;
+  }
+
   #header-component[data-split-menu] .header__column--right {
     justify-content: space-between;
   }
