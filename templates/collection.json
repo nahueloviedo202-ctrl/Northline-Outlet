@@ -31,7 +31,7 @@
           "type": "text",
           "name": "t:names.title",
           "settings": {
-            "text": "<h1>{{ closest.collection.title }}</h1>",
+            "text": "<h3><strong>PRODUCTS</strong></h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -124,6 +124,7 @@
             "enable_filtering": true,
             "filter_style": "vertical",
             "show_filters_title": false,
+            "expand_filters_by_default": false,
             "filter_width": "centered",
             "text_label_case": "uppercase",
             "show_swatch_label": false,
