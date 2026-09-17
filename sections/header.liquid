@@ -85,8 +85,19 @@
   endcapture
 
   capture menu
-    content_for 'block', type: '_header-menu', id: 'header-menu'
+    if section.settings.enable_split_menu
+      content_for 'block', type: '_header-menu', id: 'header-menu', link_start: 0, link_limit: section.settings.split_menu_index
+    else
+      content_for 'block', type: '_header-menu', id: 'header-menu'
+    endif
   endcapture
+
+  assign menu_secondary = ''
+  if section.settings.enable_split_menu
+    capture menu_secondary
+      content_for 'block', type: '_header-menu', id: 'header-menu', link_start: section.settings.split_menu_index
+    endcapture
+  endif
 
   capture drawer_menu
     content_for 'block', type: '_header-menu', id: 'header-menu', variant: 'mobile'
@@ -228,6 +239,12 @@
   elsif bottom_transparent
     assign background_transparent_color_value = 'bottom'
   endif
+
+  # Split navigation: first `split_menu_index` top-level links stay with the primary
+  # menu, the rest render as a second menu group positioned via menu_secondary_position.
+  if section.settings.enable_split_menu
+    assign order = order | append: ',menu_secondary'
+  endif
 %}
 
 {% capture localization_markup %}
@@ -350,6 +367,9 @@
   {% endif %}
   data-skip-node-update
   data-scroll-direction="none"
+  {% if section.settings.enable_split_menu %}
+    data-split-menu
+  {% endif %}
   {% if section.settings.menu_row == 'top' and bottom_row_blocks.size > 0 %}
     data-submenu-overlap-bottom-row
   {% endif %}
@@ -376,6 +396,10 @@
       --header-actions-font-family: var(--font-{{ section.settings.actions_font | default: 'heading' }}--family);
       --header-actions-font-weight: var(--font-{{ section.settings.actions_font | default: 'heading' }}--weight);
       --header-actions-text-case: {{ section.settings.actions_text_case | default: 'none' }};
+    {% endif %}
+    {% if section.settings.frame_border_width > 0 %}
+      --header-frame-border-width: {{ section.settings.frame_border_width }}px;
+      --header-frame-border-color: {{ section.settings.frame_border_color | default: 'currentColor' }};
     {% endif %}
   "
 >
@@ -451,6 +475,7 @@
         first: first,
         logo: logo,
         menu: menu,
+        menu_secondary: menu_secondary,
         actions: actions,
         localization: localization_markup,
         search: search,
@@ -1232,6 +1257,17 @@
     font-family: var(--menu-localization-font);
     font-size: var(--menu-localization-font-size);
   }
+
+  /* Outer frame border: full-bleed bar above and below the whole header */
+  .header {
+    border-block: var(--header-frame-border-width, 0px) solid var(--header-frame-border-color, transparent);
+  }
+
+  /* Split navigation: push the secondary menu group flush against the logo and
+     the actions/localization group flush against the page edge */
+  #header-component[data-split-menu] .header__column--right {
+    justify-content: space-between;
+  }
 {% endstylesheet %}
 
 {% unless request.design_mode %}
@@ -1312,6 +1348,44 @@
         }
       ],
       "default": "top"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_split_menu",
+      "label": "Split menu around logo",
+      "info": "Shows the first menu items to the left of a centered logo, and the rest to the right, alongside the icons.",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "split_menu_index",
+      "label": "Items before the logo",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 1,
+      "visible_if": "{{ section.settings.enable_split_menu }}"
+    },
+    {
+      "type": "select",
+      "id": "menu_secondary_position",
+      "label": "Position of the remaining items",
+      "options": [
+        {
+          "value": "left",
+          "label": "t:options.left"
+        },
+        {
+          "value": "center",
+          "label": "t:options.center"
+        },
+        {
+          "value": "right",
+          "label": "t:options.right"
+        }
+      ],
+      "default": "right",
+      "visible_if": "{{ section.settings.enable_split_menu }}"
     },
     {
       "type": "header",
@@ -1588,6 +1662,23 @@
       "label": "t:settings.bottom_border_color",
       "placeholder": "t:settings.default",
       "visible_if": "{{ section.settings.border_width > 0 }}"
+    },
+    {
+      "type": "range",
+      "id": "frame_border_width",
+      "label": "Outer frame border thickness",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "frame_border_color",
+      "label": "Outer frame border color",
+      "placeholder": "t:settings.default",
+      "visible_if": "{{ section.settings.frame_border_width > 0 }}"
     },
     {
       "type": "header",

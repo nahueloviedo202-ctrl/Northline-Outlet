@@ -4,6 +4,8 @@
 
   @param {string} [variant] - What version of the menu to render. Defaults to header menu.
   @param {string} [transparent] - Show a transparent menu
+  @param {number} [link_start] - Desktop only: index of the first top-level link to render. Defaults to 0 (all links).
+  @param {number} [link_limit] - Desktop only: number of top-level links to render starting at link_start. Omit to render through the end of the menu.
 {%- enddoc -%}
 
 {% liquid
@@ -90,10 +92,22 @@
       elsif block_settings.menu_style == 'featured_products'
         assign ratio = block_settings.featured_products_aspect_ratio
       endif
+
+      assign menu_links = block_settings.menu.links
+      if link_start != blank or link_limit != blank
+        assign link_start = link_start | default: 0
+        if link_start > menu_links.size
+          assign link_start = menu_links.size
+        endif
+        if link_limit == blank
+          assign link_limit = menu_links.size | minus: link_start
+        endif
+        assign menu_links = menu_links | slice: link_start, link_limit
+      endif
     %}
 
     {% capture children %}
-      {% for link in block_settings.menu.links %}
+      {% for link in menu_links %}
         <li
           class="menu-list__list-item"
           on:blur="/deactivate"

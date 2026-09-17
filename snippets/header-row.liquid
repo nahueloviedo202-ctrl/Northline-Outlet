@@ -8,6 +8,7 @@
   @param {string} [first] - Optional captured HTML for the first item (typically drawer menu for top row)
   @param {string} [logo] - Captured HTML for the logo element
   @param {string} [menu] - Captured HTML for the menu navigation
+  @param {string} [menu_secondary] - Captured HTML for the secondary menu group, shown after the logo when the menu is split
   @param {string} [actions] - Captured HTML for header actions (cart, account buttons, etc.)
   @param {string} [localization] - Captured HTML for language/country selector
   @param {string} [search] - Captured HTML for search input
@@ -78,6 +79,8 @@
               {{ logo }}
             {% when 'menu' %}
               {{ menu }}
+            {% when 'menu_secondary' %}
+              {{ menu_secondary }}
             {% when 'localization' %}
               {{ localization }}
             {% when 'search' %}
