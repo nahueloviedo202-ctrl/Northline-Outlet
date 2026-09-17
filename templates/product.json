@@ -801,6 +801,204 @@
         "padding-block-end": 0
       }
     },
+    "testimonial_carousel_fPVYEH": {
+      "type": "testimonial-carousel",
+      "blocks": {
+        "static-sidebar": {
+          "type": "group",
+          "name": "Sidebar",
+          "static": true,
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 8,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "background_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
+            "open_in_new_tab": false,
+            "placeholder": "",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "text_YUpLc3": {
+              "type": "text",
+              "name": "Heading",
+              "settings": {
+                "text": "<h2>Testimonials</h2>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "h3",
+                "font": "var(--font-heading--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
+            "text_pTFV7J": {
+              "type": "text",
+              "name": "Rating",
+              "settings": {
+                "text": "<p>Based on 3,250 reviews</p>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.875rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_YUpLc3",
+            "text_pTFV7J"
+          ]
+        },
+        "static-slider": {
+          "type": "_testimonial-slider",
+          "name": "Slider",
+          "static": true,
+          "settings": {},
+          "blocks": {
+            "testimonial_card_Wjbrqp": {
+              "type": "_testimonial-card",
+              "settings": {
+                "stars_count": 5,
+                "title": "Highly Recommended",
+                "text": "<p>Good fit, nice design, and quick delivery. Will shop here again.</p>",
+                "author": "Brandon L.",
+                "date": "1 day ago"
+              },
+              "blocks": {}
+            },
+            "testimonial_card_xkcAac": {
+              "type": "_testimonial-card",
+              "settings": {
+                "stars_count": 5,
+                "title": "Perfect Fit",
+                "text": "<p>Great quality and fast shipping. Everything arrived just as expected.</p>",
+                "author": "Emily R.",
+                "date": "2 days ago"
+              },
+              "blocks": {}
+            },
+            "testimonial_card_VRQrjm": {
+              "type": "_testimonial-card",
+              "settings": {
+                "stars_count": 5,
+                "title": "Perfect Fit",
+                "text": "<p>Great quality and fast shipping. Everything arrived just as expected.</p>",
+                "author": "Emily R.",
+                "date": "2 days ago"
+              },
+              "blocks": {}
+            },
+            "testimonial_card_Fb6afi": {
+              "type": "_testimonial-card",
+              "settings": {
+                "stars_count": 4.5,
+                "title": "Great Quality",
+                "text": "<p>Very comfortable and stylish. I've already ordered another pair!</p>",
+                "author": "Jason M.",
+                "date": "10 days ago"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "testimonial_card_Wjbrqp",
+            "testimonial_card_xkcAac",
+            "testimonial_card_VRQrjm",
+            "testimonial_card_Fb6afi"
+          ]
+        }
+      },
+      "name": "Testimonial carousel",
+      "settings": {
+        "content_vertical_align": "center",
+        "sidebar_width": 20,
+        "columns": 3,
+        "columns_mobile": 1,
+        "slide_gap": 12,
+        "slide_gap_mobile": 16,
+        "autoplay": false,
+        "autoplay_speed": 4000,
+        "icons_style": "arrow",
+        "icons_shape": "circle",
+        "slide_bg_color": "#FFFFFF",
+        "slide_border_color": "#121212",
+        "slide_border_thickness": 0,
+        "slide_radius": 2,
+        "slide_content_align": "left",
+        "slide_content_align_mobile": "left",
+        "slide_padding_horizontal": 16,
+        "slide_padding_horizontal_mobile": 16,
+        "slide_padding_vertical": 16,
+        "slide_padding_vertical_mobile": 16,
+        "title_color": "#121212",
+        "text_color": "#121212",
+        "author_color": "#666666",
+        "date_color": "#666666",
+        "star_color": "#FFFFFF",
+        "star_bg_color": "#00B67A",
+        "star_bg_half_color": "#DDDDDD",
+        "star_size": 18,
+        "star_size_mobile": 18,
+        "section_width": "page-width",
+        "background_color": "",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      }
+    },
     "section_aHyDYE": {
       "type": "section",
       "blocks": {
@@ -1195,192 +1393,6 @@
         "overlay_style": "solid",
         "gradient_direction": "to top",
         "image_height_mobile": 240
-      }
-    },
-    "testimonial_carousel_fPVYEH": {
-      "type": "testimonial-carousel",
-      "blocks": {
-        "static-sidebar": {
-          "type": "group",
-          "name": "Sidebar",
-          "static": true,
-          "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 8,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "background_color": "",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_color": "",
-            "border_radius": 0,
-            "link": "",
-            "open_in_new_tab": false,
-            "placeholder": "",
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "text_YUpLc3": {
-              "type": "text",
-              "name": "Heading",
-              "settings": {
-                "text": "<h2>Testimonials</h2>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h3",
-                "font": "var(--font-heading--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "text_color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_pTFV7J": {
-              "type": "text",
-              "name": "Rating",
-              "settings": {
-                "text": "<p>Based on 3,250 reviews</p>",
-                "width": "fit-content",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "paragraph",
-                "font": "var(--font-body--family)",
-                "font_size": "0.875rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "text_color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_YUpLc3",
-            "text_pTFV7J"
-          ]
-        },
-        "static-slider": {
-          "type": "_testimonial-slider",
-          "name": "Slider",
-          "static": true,
-          "settings": {},
-          "blocks": {
-            "testimonial_card_Wjbrqp": {
-              "type": "_testimonial-card",
-              "settings": {
-                "stars_count": 5,
-                "title": "Highly Recommended",
-                "text": "<p>Good fit, nice design, and quick delivery. Will shop here again.</p>",
-                "author": "Brandon L.",
-                "date": "1 day ago"
-              },
-              "blocks": {}
-            },
-            "testimonial_card_xkcAac": {
-              "type": "_testimonial-card",
-              "settings": {
-                "stars_count": 5,
-                "title": "Perfect Fit",
-                "text": "<p>Great quality and fast shipping. Everything arrived just as expected.</p>",
-                "author": "Emily R.",
-                "date": "2 days ago"
-              },
-              "blocks": {}
-            },
-            "testimonial_card_Fb6afi": {
-              "type": "_testimonial-card",
-              "settings": {
-                "stars_count": 4.5,
-                "title": "Great Quality",
-                "text": "<p>Very comfortable and stylish. I've already ordered another pair!</p>",
-                "author": "Jason M.",
-                "date": "10 days ago"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "testimonial_card_Wjbrqp",
-            "testimonial_card_xkcAac",
-            "testimonial_card_Fb6afi"
-          ]
-        }
-      },
-      "name": "Testimonial carousel",
-      "settings": {
-        "content_vertical_align": "center",
-        "sidebar_width": 20,
-        "columns": 3,
-        "columns_mobile": 1,
-        "slide_gap": 12,
-        "slide_gap_mobile": 16,
-        "autoplay": false,
-        "autoplay_speed": 4000,
-        "icons_style": "arrow",
-        "icons_shape": "circle",
-        "slide_bg_color": "#FFFFFF",
-        "slide_border_color": "#121212",
-        "slide_border_thickness": 0,
-        "slide_radius": 2,
-        "slide_content_align": "left",
-        "slide_content_align_mobile": "left",
-        "slide_padding_horizontal": 16,
-        "slide_padding_horizontal_mobile": 16,
-        "slide_padding_vertical": 16,
-        "slide_padding_vertical_mobile": 16,
-        "title_color": "#121212",
-        "text_color": "#121212",
-        "author_color": "#666666",
-        "date_color": "#666666",
-        "star_color": "#FFFFFF",
-        "star_bg_color": "#00B67A",
-        "star_bg_half_color": "#DDDDDD",
-        "star_size": 18,
-        "star_size_mobile": 18,
-        "section_width": "page-width",
-        "background_color": "",
-        "padding-block-start": 48,
-        "padding-block-end": 48
       }
     }
   },
