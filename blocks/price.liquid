@@ -53,16 +53,18 @@
   "
   {{ block.shopify_attributes }}
 >
-  {% render 'price',
-    show_unit_price: true,
-    product_resource: product_resource,
-    show_sale_price_first: block_settings.show_sale_price_first
-  %}
+  <div class="price-with-badge">
+    {% render 'price',
+      show_unit_price: true,
+      product_resource: product_resource,
+      show_sale_price_first: block_settings.show_sale_price_first
+    %}
 
-  {% if block_settings.show_savings_badge and selected_variant.compare_at_price > selected_variant.price %}
-    {% assign savings_pct = selected_variant.compare_at_price | minus: selected_variant.price | times: 100 | divided_by: selected_variant.compare_at_price %}
-    <span class="price-savings-badge">Save {{ savings_pct }}%</span>
-  {% endif %}
+    {% if block_settings.show_savings_badge and selected_variant.compare_at_price > selected_variant.price %}
+      {% assign savings_pct = selected_variant.compare_at_price | minus: selected_variant.price | times: 100 | divided_by: selected_variant.compare_at_price %}
+      <span class="price-savings-badge">Save {{ savings_pct }}%</span>
+    {% endif %}
+  </div>
 
   {% if block_settings.show_tax_info %}
     <div class="tax-note">
@@ -98,10 +100,16 @@
 {% render 'payment-terms-styles' %}
 
 {% stylesheet %}
+  .price-with-badge {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--gap-xs);
+  }
+
   .price-savings-badge {
     display: inline-flex;
     align-items: center;
-    margin-inline-start: var(--gap-xs);
     padding: 4px 10px;
     border-radius: 20px;
     font-size: 0.8rem;
@@ -110,7 +118,7 @@
     background-color: #d9f2e3;
   }
 
-  product-price:has(.price-savings-badge) .price-item__group.price:has(+ .compare-at-price) {
+  .price-with-badge:has(.price-savings-badge) .price-item__group.price:has(+ .compare-at-price) {
     color: #1a7d3a;
     font-weight: 600;
   }
