@@ -351,7 +351,7 @@
                 "accordion_row_CCRNky": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Size",
+                    "heading": "SIZE",
                     "open_by_default": true,
                     "icon": "none",
                     "width": 20
@@ -390,7 +390,7 @@
                 "accordion_row_B4bifN": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "Shipping information",
+                    "heading": "SHIPPING INFORMATION",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
@@ -429,7 +429,7 @@
                 "accordion_row_CmjajJ": {
                   "type": "_accordion-row",
                   "settings": {
-                    "heading": "30-Day Risk-Free Trial",
+                    "heading": "30-DAY RISK-FREE TRIAL",
                     "open_by_default": false,
                     "icon": "none",
                     "width": 20
