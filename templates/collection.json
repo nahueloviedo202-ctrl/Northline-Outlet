@@ -9,6 +9,21 @@
  */
 {
   "sections": {
+    "divider_before_products": {
+      "type": "divider",
+      "name": "t:names.divider",
+      "settings": {
+        "background_color": "",
+        "divider_color": "#000000",
+        "section_width": "full-width",
+        "thickness": 3,
+        "corner_radius": "square",
+        "width_percent": 100,
+        "alignment_horizontal": "center",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
+    },
     "section": {
       "type": "section",
       "blocks": {
@@ -22,10 +37,10 @@
             "alignment": "left",
             "type_preset": "h3",
             "font": "var(--font-body--family)",
-            "font_size": "1rem",
+            "font_size": "",
             "line_height": "normal",
             "letter_spacing": "normal",
-            "case": "none",
+            "case": "uppercase",
             "wrap": "pretty",
             "text_color": "",
             "background": false,
@@ -170,7 +185,7 @@
                 "font_size": "1rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
-                "case": "none",
+                "case": "uppercase",
                 "wrap": "pretty",
                 "text_color": "",
                 "background": false,
@@ -229,10 +244,27 @@
         "padding-block-start": 0,
         "padding-block-end": 32
       }
+    },
+    "divider_after_products": {
+      "type": "divider",
+      "name": "t:names.divider",
+      "settings": {
+        "background_color": "",
+        "divider_color": "#000000",
+        "section_width": "full-width",
+        "thickness": 3,
+        "corner_radius": "square",
+        "width_percent": 100,
+        "alignment_horizontal": "center",
+        "padding-block-start": 0,
+        "padding-block-end": 0
+      }
     }
   },
   "order": [
+    "divider_before_products",
     "section",
-    "main"
+    "main",
+    "divider_after_products"
   ]
 }
