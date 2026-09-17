@@ -200,6 +200,8 @@
 
   if section.settings.section_height == 'compact'
     assign header_height_class = ' header--compact'
+  elsif section.settings.section_height == 'large'
+    assign header_height_class = ' header--large'
   endif
 
   if bottom_row_blocks.size > 0 and section.settings.background_color_top == section.settings.background_color_bottom and section.settings.divider_width == 0
@@ -1050,6 +1052,10 @@
     --header-padding: var(--padding-2xs);
   }
 
+  .header.header--large {
+    --header-padding: var(--padding-2xl);
+  }
+
   .header__columns {
     --padding-block-start: var(--header-padding);
     --padding-block-end: var(--header-padding);
@@ -1595,6 +1601,10 @@
         {
           "value": "standard",
           "label": "t:options.standard"
+        },
+        {
+          "value": "large",
+          "label": "t:options.large"
         }
       ],
       "default": "standard"
