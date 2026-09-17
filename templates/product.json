@@ -999,156 +999,198 @@
           },
           "blocks": {}
         },
-        "accordion_krJnXi": {
-          "type": "accordion",
-          "name": "t:names.accordion",
+        "group_qa_width": {
+          "type": "group",
+          "name": "t:names.group",
           "settings": {
-            "icon": "plus",
-            "dividers": true,
-            "divider_color": "",
-            "type_preset": "h5",
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "center",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 0,
+            "width": "custom",
+            "custom_width": 40,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "background_media": "none",
             "background_color": "",
-            "text_color": "",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
             "border_color": "",
             "border_radius": 0,
+            "open_in_new_tab": false,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
           "blocks": {
-            "accordion_row_EGkP9Y": {
-              "type": "_accordion-row",
+            "accordion_krJnXi": {
+              "type": "accordion",
+              "name": "t:names.accordion",
               "settings": {
-                "heading": "<strong>What size should I buy?</strong>",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
+                "icon": "plus",
+                "dividers": true,
+                "divider_color": "",
+                "type_preset": "h5",
+                "background_color": "",
+                "text_color": "",
+                "border": "none",
+                "border_width": 1,
+                "border_opacity": 100,
+                "border_color": "",
+                "border_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {
-                "text_jckT8P": {
-                  "type": "text",
+                "accordion_row_EGkP9Y": {
+                  "type": "_accordion-row",
                   "settings": {
-                    "text": "<p>Check our size chart above the size selector on each product page for a full fit guide. If you're between sizes, we recommend sizing up.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
+                    "heading": "<strong>What size should I buy?</strong>",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
                   },
-                  "blocks": {}
+                  "blocks": {
+                    "text_jckT8P": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Check our size chart above the size selector on each product page for a full fit guide. If you're between sizes, we recommend sizing up.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_jckT8P"
+                  ]
+                },
+                "accordion_row_6WEGAH": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "<strong>What is the Return Policy?</strong>",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_qAwiKU": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>We offer a 30-day risk-free trial. If you're not completely happy with your purchase, contact us for a full refund.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_qAwiKU"
+                  ]
+                },
+                "accordion_row_N8azLi": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "heading": "<strong>How Should I Care for My Shoes?</strong>",
+                    "open_by_default": false,
+                    "icon": "none",
+                    "width": 20
+                  },
+                  "blocks": {
+                    "text_YE69iW": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Wipe down with a soft, damp cloth after wear and let them air dry away from direct heat to keep them looking new for longer.</p>",
+                        "width": "100%",
+                        "max_width": "normal",
+                        "alignment": "left",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_size": "1rem",
+                        "line_height": "normal",
+                        "letter_spacing": "normal",
+                        "case": "none",
+                        "wrap": "pretty",
+                        "text_color": "",
+                        "background": false,
+                        "background_color": "#00000026",
+                        "corner_radius": 0,
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_YE69iW"
+                  ]
                 }
               },
               "block_order": [
-                "text_jckT8P"
-              ]
-            },
-            "accordion_row_6WEGAH": {
-              "type": "_accordion-row",
-              "settings": {
-                "heading": "<strong>What is the Return Policy?</strong>",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_qAwiKU": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>We offer a 30-day risk-free trial. If you're not completely happy with your purchase, contact us for a full refund.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_qAwiKU"
-              ]
-            },
-            "accordion_row_N8azLi": {
-              "type": "_accordion-row",
-              "settings": {
-                "heading": "<strong>How Should I Care for My Shoes?</strong>",
-                "open_by_default": false,
-                "icon": "none",
-                "width": 20
-              },
-              "blocks": {
-                "text_YE69iW": {
-                  "type": "text",
-                  "settings": {
-                    "text": "<p>Wipe down with a soft, damp cloth after wear and let them air dry away from direct heat to keep them looking new for longer.</p>",
-                    "width": "100%",
-                    "max_width": "normal",
-                    "alignment": "left",
-                    "type_preset": "rte",
-                    "font": "var(--font-body--family)",
-                    "font_size": "1rem",
-                    "line_height": "normal",
-                    "letter_spacing": "normal",
-                    "case": "none",
-                    "wrap": "pretty",
-                    "text_color": "",
-                    "background": false,
-                    "background_color": "#00000026",
-                    "corner_radius": 0,
-                    "padding-block-start": 0,
-                    "padding-block-end": 0,
-                    "padding-inline-start": 0,
-                    "padding-inline-end": 0
-                  },
-                  "blocks": {}
-                }
-              },
-              "block_order": [
-                "text_YE69iW"
+                "accordion_row_EGkP9Y",
+                "accordion_row_6WEGAH",
+                "accordion_row_N8azLi"
               ]
             }
           },
           "block_order": [
-            "accordion_row_EGkP9Y",
-            "accordion_row_6WEGAH",
-            "accordion_row_N8azLi"
+            "accordion_krJnXi"
           ]
         }
       },
       "block_order": [
         "text_UPKcGi",
         "text_bBWYaH",
-        "accordion_krJnXi"
+        "group_qa_width"
       ],
       "name": "Questions & answers",
       "settings": {
