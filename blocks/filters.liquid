@@ -217,7 +217,7 @@
                           assign should_render_clear = false
                         endif
 
-                        render 'price-filter', filter: filter, filter_style: block_settings.filter_style, should_render_clear: should_render_clear, id_prefix: 'horizontal'
+                        render 'price-filter', filter: filter, filter_style: block_settings.filter_style, should_render_clear: should_render_clear, id_prefix: 'horizontal', expand_by_default: block_settings.expand_filters_by_default
                       -%}
                     {% else %}
                       {% liquid
@@ -232,7 +232,7 @@
                         else
                           assign should_render_clear = false
                         endif
-                        render 'list-filter', filter: filter, filter_style: block_settings.filter_style, active_value_count: active_value_count, should_render_clear: should_render_clear, show_swatch_label: block_settings.show_swatch_label, sectionId: section.id
+                        render 'list-filter', filter: filter, filter_style: block_settings.filter_style, active_value_count: active_value_count, should_render_clear: should_render_clear, show_swatch_label: block_settings.show_swatch_label, sectionId: section.id, expand_by_default: block_settings.expand_filters_by_default
                       %}
                   {% endcase %}
                 {%- endfor -%}
@@ -481,7 +481,7 @@
                           assign is_active = true
                         endif
 
-                        render 'price-filter', filter: filter, filter_style: 'vertical', should_render_clear: false, id_prefix: 'dialog'
+                        render 'price-filter', filter: filter, filter_style: 'vertical', should_render_clear: false, id_prefix: 'dialog', expand_by_default: true
                       -%}
                     {% else %}
                       {% liquid
@@ -491,7 +491,7 @@
 
                         assign active_value_count = filter.active_values | size
                         assign total_active_values = total_active_values | plus: active_value_count
-                        render 'list-filter', filter: filter, filter_style: 'vertical', active_value_count: active_value_count, should_render_clear: false, in_drawer: true, sectionId: section.id
+                        render 'list-filter', filter: filter, filter_style: 'vertical', active_value_count: active_value_count, should_render_clear: false, in_drawer: true, sectionId: section.id, expand_by_default: true
                       %}
                   {% endcase %}
                 {%- endfor -%}
@@ -844,6 +844,10 @@
       justify-content: flex-start;
       height: var(--minimum-touch-target);
     }
+  }
+
+  .facets--vertical .facets__summary {
+    font-size: var(--font-h4--size);
   }
 
   .facets__summary .icon-caret {
@@ -1329,6 +1333,13 @@
       "type": "checkbox",
       "id": "show_filters_title",
       "label": "Show \"Filters\" title",
+      "default": false,
+      "visible_if": "{{ block.settings.enable_filtering == true and block.settings.filter_style == 'vertical' }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "expand_filters_by_default",
+      "label": "Expand filters by default",
       "default": false,
       "visible_if": "{{ block.settings.enable_filtering == true and block.settings.filter_style == 'vertical' }}"
     },

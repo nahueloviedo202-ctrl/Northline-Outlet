@@ -5,6 +5,7 @@
   @param {string} filter_style - The filter style, can be 'horizontal' or 'vertical'.
   @param {boolean} [should_render_clear] - Whether to render the clear button.
   @param {string} [id_prefix] - Unique prefix to avoid duplicate IDs when rendered multiple times.
+  @param {boolean} [expand_by_default] - Whether the accordion starts expanded. Defaults to false.
 
   @example
   {% render 'price-filter', filter: filter, filter_style: 'vertical', id_prefix: 'dialog' %}
@@ -18,6 +19,7 @@
   elsif filter_style == 'vertical'
     assign is_vertical = true
   endif
+  assign expand_by_default = expand_by_default | default: false
 -%}
 {% capture accordion_children %}
   <details
@@ -25,7 +27,7 @@
     {% if filter_style == 'horizontal' %}
       data-auto-close-details="desktop"
     {% endif %}
-    {% if filter_style == 'vertical' %}
+    {% if expand_by_default %}
       open
     {% endif %}
   >
@@ -181,9 +183,9 @@
 {% render 'accordion-custom-component',
   children: accordion_children,
   class: 'facets__item',
-  open: is_vertical,
-  open_by_default_on_desktop: is_vertical,
-  open_by_default_on_mobile: is_vertical,
+  open: expand_by_default,
+  open_by_default_on_desktop: expand_by_default,
+  open_by_default_on_mobile: expand_by_default,
   disable_animation_on_desktop: is_horizontal,
   close_with_escape: is_horizontal
 %}
