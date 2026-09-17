@@ -85,7 +85,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h2>BEST SELLERS</h2>",
+                "text": "<h2><strong>BEST SELLERS</strong></h2>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -290,7 +290,7 @@
               "type": "text",
               "name": "t:names.text",
               "settings": {
-                "text": "<h4>COLLECTION LIST</h4>",
+                "text": "<h4><strong>COLLECTION LIST</strong></h4>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
