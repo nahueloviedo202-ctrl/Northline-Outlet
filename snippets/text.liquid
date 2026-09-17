@@ -40,6 +40,9 @@
       if block_settings.font_size != ''
         echo ' custom-font-size '
       endif
+      if block_settings.font_size_mobile != ''
+        echo ' custom-font-size-mobile '
+      endif
       if block_settings.color != ''
         echo ' custom-color '
       endif
@@ -61,6 +64,9 @@
   style="
     {% render 'spacing-padding', settings: block_settings %}
     {% render 'typography-style', settings: block_settings %}
+    {% if block_settings.font_size_mobile != blank %}
+      --font-size-mobile: {{ block_settings.font_size_mobile }};
+    {% endif %}
     {% if block_settings.text_color != blank %}
       --color: {{ block_settings.text_color }};
       --color-rgb: {{ block_settings.text_color.rgb }};

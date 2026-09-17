@@ -1132,6 +1132,18 @@ summary:hover {
   font-size: var(--font-size);
 }
 
+.custom-font-size-mobile,
+.custom-font-size-mobile > * {
+  font-size: var(--font-size-mobile, var(--font-size));
+}
+
+@media screen and (min-width: 750px) {
+  .custom-font-size-mobile,
+  .custom-font-size-mobile > * {
+    font-size: var(--font-size);
+  }
+}
+
 .custom-font-weight,
 .custom-font-weight > * {
   font-weight: var(--font-weight);
