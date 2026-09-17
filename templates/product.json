@@ -935,8 +935,8 @@
               "type": "_testimonial-card",
               "settings": {
                 "stars_count": 5,
-                "title": "Perfect Fit",
-                "text": "<p>Great quality and fast shipping. Everything arrived just as expected.</p>",
+                "title": "Fast Shipping",
+                "text": "<p>\"Excellent service and smooth shopping experience. Highly recommend.\"</p>",
                 "author": "Emily R.",
                 "date": "2 days ago"
               },
@@ -970,11 +970,11 @@
         "columns_mobile": 1,
         "slide_gap": 12,
         "slide_gap_mobile": 16,
-        "autoplay": false,
+        "autoplay": true,
         "autoplay_speed": 4000,
         "icons_style": "arrow",
         "icons_shape": "circle",
-        "slide_bg_color": "#FFFFFF",
+        "slide_bg_color": "{{ settings.color_palette.color2 }}",
         "slide_border_color": "#121212",
         "slide_border_thickness": 0,
         "slide_radius": 2,
@@ -994,7 +994,7 @@
         "star_size": 18,
         "star_size_mobile": 18,
         "section_width": "page-width",
-        "background_color": "",
+        "background_color": "{{ settings.color_palette.background }}",
         "padding-block-start": 48,
         "padding-block-end": 48
       }
