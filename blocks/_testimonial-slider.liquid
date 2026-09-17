@@ -1,0 +1,114 @@
+
+
+{% liquid
+  assign slide_count = block.blocks.size
+  assign show_arrows = true
+  if section.settings.icons_style == 'none'
+    assign show_arrows = false
+  endif
+%}
+
+{% capture slides %}
+  {% content_for 'blocks' %}
+{% endcapture %}
+
+<div
+  class="testimonial-slider"
+  style="
+    --testimonial-columns: {{ section.settings.columns }};
+    --testimonial-columns-mobile: {{ section.settings.columns_mobile }};
+    {% render 'gap-style', value: section.settings.slide_gap, name: 'testimonial-gap' %}
+    {% render 'gap-style', value: section.settings.slide_gap_mobile, name: 'testimonial-gap-mobile' %}
+  "
+  {{ block.shopify_attributes }}
+>
+  {% render 'slideshow',
+    slides: slides,
+    slide_count: slide_count,
+    class: 'testimonial-slider__slideshow',
+    show_arrows: show_arrows,
+    icon_style: section.settings.icons_style,
+    icon_shape: section.settings.icons_shape,
+    autoplay: section.settings.autoplay,
+    autoplay_speed: section.settings.autoplay_speed,
+    infinite: true,
+    slide_position: 'stretch'
+  %}
+</div>
+
+{% stylesheet %}
+  .testimonial-slider__slideshow .testimonial-card {
+    flex: 0 0 auto;
+    width: calc(
+      (100% - (var(--testimonial-gap-mobile, 16px) * (var(--testimonial-columns-mobile, 1) - 1))) /
+        var(--testimonial-columns-mobile, 1)
+    );
+  }
+
+  .testimonial-slider__slideshow slideshow-slides {
+    --slideshow-gap: var(--testimonial-gap-mobile, 16px);
+  }
+
+  @media screen and (min-width: 1024px) {
+    .testimonial-slider__slideshow .testimonial-card {
+      width: calc(
+        (100% - (var(--testimonial-gap, 12px) * (var(--testimonial-columns, 3) - 1))) / var(--testimonial-columns, 3)
+      );
+    }
+
+    .testimonial-slider__slideshow slideshow-slides {
+      --slideshow-gap: var(--testimonial-gap, 12px);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Testimonial slider",
+  "tag": null,
+  "blocks": [
+    {
+      "type": "_testimonial-card"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial slider",
+      "category": "Storytelling",
+      "blocks": {
+        "testimonial_1": {
+          "type": "_testimonial-card",
+          "settings": {
+            "stars_count": 5,
+            "title": "Highly Recommended",
+            "text": "<p>Good fit, nice design, and quick delivery. Will shop here again.</p>",
+            "author": "Brandon L.",
+            "date": "1 day ago"
+          }
+        },
+        "testimonial_2": {
+          "type": "_testimonial-card",
+          "settings": {
+            "stars_count": 5,
+            "title": "Perfect Fit",
+            "text": "<p>Great quality and fast shipping. Everything arrived just as expected.</p>",
+            "author": "Emily R.",
+            "date": "2 days ago"
+          }
+        },
+        "testimonial_3": {
+          "type": "_testimonial-card",
+          "settings": {
+            "stars_count": 4.5,
+            "title": "Great Quality",
+            "text": "<p>Very comfortable and stylish. I've already ordered another pair!</p>",
+            "author": "Jason M.",
+            "date": "10 days ago"
+          }
+        }
+      },
+      "block_order": ["testimonial_1", "testimonial_2", "testimonial_3"]
+    }
+  ]
+}
+{% endschema %}

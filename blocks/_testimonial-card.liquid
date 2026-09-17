@@ -1,0 +1,225 @@
+
+
+{% liquid
+  assign block_settings = block.settings
+  assign stars_count = block_settings.stars_count
+  assign star_icon = section.settings.star_icon
+  assign star_color = section.settings.star_color
+  assign star_bg_color = section.settings.star_bg_color
+  assign star_bg_half_color = section.settings.star_bg_half_color
+  assign rounded_stars = stars_count | round: 0
+%}
+
+<div
+  class="testimonial-card"
+  ref="slides[]"
+  style="
+    --testimonial-card-bg: {{ section.settings.slide_bg_color }};
+    --testimonial-card-border-color: {{ section.settings.slide_border_color }};
+    --testimonial-card-border-width: {{ section.settings.slide_border_thickness }}px;
+    --testimonial-card-radius: {{ section.settings.slide_radius }}px;
+    --testimonial-card-padding-inline: {{ section.settings.slide_padding_horizontal_mobile }}px;
+    --testimonial-card-padding-block: {{ section.settings.slide_padding_vertical_mobile }}px;
+    --testimonial-card-padding-inline-desktop: {{ section.settings.slide_padding_horizontal }}px;
+    --testimonial-card-padding-block-desktop: {{ section.settings.slide_padding_vertical }}px;
+    --testimonial-star-size: {{ section.settings.star_size_mobile }}px;
+    --testimonial-star-size-desktop: {{ section.settings.star_size }}px;
+    --testimonial-title-color: {{ section.settings.title_color }};
+    --testimonial-text-color: {{ section.settings.text_color }};
+    --testimonial-author-color: {{ section.settings.author_color }};
+    --testimonial-date-color: {{ section.settings.date_color }};
+    --testimonial-text-align: {{ section.settings.slide_content_align_mobile | default: 'left' }};
+    --testimonial-text-align-desktop: {{ section.settings.slide_content_align | default: 'left' }};
+  "
+  {{ block.shopify_attributes }}
+>
+  {% if stars_count > 0 %}
+    <div
+      class="testimonial-card__stars"
+      role="img"
+      aria-label="{{ stars_count }} out of 5 stars"
+    >
+      {% if star_icon != blank %}
+        {% for i in (1..rounded_stars) %}
+          {{
+            star_icon
+            | image_url: width: 64
+            | image_tag: width: 64, height: 64, loading: 'lazy', class: 'testimonial-card__star-icon', alt: ''
+          }}
+        {% endfor %}
+      {% else %}
+        {% for i in (1..5) %}
+          {% assign half_value = i | minus: 0.5 %}
+          <svg
+            class="testimonial-card__star-icon"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+          >
+            {% if stars_count == half_value %}
+              <defs>
+                <linearGradient id="testimonial-star-{{ block.id }}-{{ i }}">
+                  <stop offset="50%" stop-color="{{ star_bg_color }}" />
+                  <stop offset="50%" stop-color="{{ star_bg_half_color }}" />
+                </linearGradient>
+              </defs>
+              <rect width="32" height="32" fill="url(#testimonial-star-{{ block.id }}-{{ i }})" />
+            {% elsif stars_count >= i %}
+              <rect width="32" height="32" fill="{{ star_bg_color }}" />
+            {% else %}
+              <rect width="32" height="32" fill="{{ star_bg_half_color }}" />
+            {% endif %}
+            <path
+              d="M16 4.7L19.4 12.1L27.5 13.2L21.6 18.8L23.1 27L16 23.1L8.9 27L10.4 18.8L4.5 13.2L12.6 12.1Z"
+              fill="{{ star_color }}"
+            />
+          </svg>
+        {% endfor %}
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if block_settings.title != blank %}
+    <p class="testimonial-card__title">{{ block_settings.title }}</p>
+  {% endif %}
+
+  {% if block_settings.text != blank %}
+    <div class="testimonial-card__text rte">{{ block_settings.text }}</div>
+  {% endif %}
+
+  {% if block_settings.author != blank or block_settings.date != blank %}
+    <div class="testimonial-card__meta">
+      {% if block_settings.author != blank %}
+        <p class="testimonial-card__author">{{ block_settings.author }}</p>
+      {% endif %}
+      {% if block_settings.date != blank %}
+        <p class="testimonial-card__date">{{ block_settings.date }}</p>
+      {% endif %}
+    </div>
+  {% endif %}
+</div>
+
+{% stylesheet %}
+  .testimonial-card {
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    background-color: var(--testimonial-card-bg, transparent);
+    border: var(--testimonial-card-border-width, 0) solid var(--testimonial-card-border-color, transparent);
+    border-radius: var(--testimonial-card-radius, 0);
+    padding: var(--testimonial-card-padding-block, 16px) var(--testimonial-card-padding-inline, 16px);
+    text-align: var(--testimonial-text-align, left);
+  }
+
+  .testimonial-card__stars {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .testimonial-card__star-icon {
+    display: block;
+    width: var(--testimonial-star-size, 18px);
+    height: var(--testimonial-star-size, 18px);
+    object-fit: cover;
+  }
+
+  .testimonial-card__title {
+    margin: 12px 0 0;
+    color: var(--testimonial-title-color, inherit);
+    font-weight: 700;
+  }
+
+  .testimonial-card__text {
+    margin-top: 6px;
+    color: var(--testimonial-text-color, inherit);
+  }
+
+  .testimonial-card__text > :first-child {
+    margin-block-start: 0;
+  }
+
+  .testimonial-card__text > :last-child {
+    margin-block-end: 0;
+  }
+
+  .testimonial-card__meta {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+  }
+
+  .testimonial-card__author {
+    margin: 0;
+    color: var(--testimonial-author-color, inherit);
+    font-weight: 700;
+  }
+
+  .testimonial-card__date {
+    margin: 0;
+    color: var(--testimonial-date-color, inherit);
+  }
+
+  @media screen and (min-width: 1024px) {
+    .testimonial-card {
+      padding: var(--testimonial-card-padding-block-desktop, 16px) var(--testimonial-card-padding-inline-desktop, 16px);
+      text-align: var(--testimonial-text-align-desktop, left);
+    }
+
+    .testimonial-card__star-icon {
+      width: var(--testimonial-star-size-desktop, 18px);
+      height: var(--testimonial-star-size-desktop, 18px);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Testimonial",
+  "tag": null,
+  "settings": [
+    {
+      "type": "range",
+      "id": "stars_count",
+      "label": "Stars count",
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "default": 5
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text",
+      "default": "<p>Add customer reviews and testimonials to highlight the positive experiences they’ve had with your store.</p>"
+    },
+    {
+      "type": "text",
+      "id": "author",
+      "label": "Author",
+      "default": "Author"
+    },
+    {
+      "type": "text",
+      "id": "date",
+      "label": "Date",
+      "default": "3 days ago"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial"
+    }
+  ]
+}
+{% endschema %}
