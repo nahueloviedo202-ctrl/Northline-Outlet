@@ -355,6 +355,288 @@
           "block_order": ["card_1", "card_2", "card_3", "card_4"]
         }
       }
+    },
+    {
+      "name": "Customer reviews",
+      "category": "t:categories.storytelling",
+      "settings": {
+        "columns": 3,
+        "mobile_columns": "1",
+        "columns_gap": 16,
+        "icons_style": "arrow",
+        "icons_shape": "circle",
+        "padding-block-start": 48,
+        "padding-block-end": 48
+      },
+      "blocks": {
+        "static-header": {
+          "type": "group",
+          "name": "t:names.header",
+          "static": true,
+          "settings": {
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 8,
+            "width": "custom",
+            "custom_width": 30,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 16,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "rating_heading": {
+              "type": "text",
+              "name": "t:names.heading",
+              "settings": {
+                "text": "<p><strong>EXCELLENT 4.7/5</strong></p>",
+                "type_preset": "h5",
+                "font": "var(--font-body--family)",
+                "wrap": "pretty",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left"
+              }
+            },
+            "rating_stars": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<span style=\"display:inline-flex;gap:2px;\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"22\" height=\"22\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"22\" height=\"22\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"22\" height=\"22\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"22\" height=\"22\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"nlPartialStarPreset\" x1=\"0\" x2=\"100%\" y1=\"0\" y2=\"0\"><stop offset=\"70%\" stop-color=\"#00b67a\"/><stop offset=\"70%\" stop-color=\"#dcdce6\"/></linearGradient></defs><rect width=\"20\" height=\"20\" fill=\"url(#nlPartialStarPreset)\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg></span>",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left"
+              }
+            },
+            "rating_count": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Based on 3,250 reviews</p>",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "0.875rem",
+                "text_color": "",
+                "wrap": "pretty",
+                "width": "fit-content",
+                "max_width": "normal",
+                "alignment": "left"
+              }
+            }
+          },
+          "block_order": ["rating_heading", "rating_stars", "rating_count"]
+        },
+        "static-carousel-content": {
+          "type": "_carousel-content",
+          "name": "t:names.carousel_content",
+          "static": true,
+          "settings": {
+            "position": "top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "height": "fit"
+          },
+          "blocks": {
+            "review_1": {
+              "type": "_card",
+              "name": "t:names.card",
+              "settings": {
+                "background_color": "#e8e8e8",
+                "padding-block-start": 20,
+                "padding-block-end": 20,
+                "padding-inline-start": 20,
+                "padding-inline-end": 20
+              },
+              "blocks": {
+                "stars_1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<span style=\"display:inline-flex;gap:2px;\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg></span>",
+                    "padding-block-start": 0,
+                    "padding-block-end": 12,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "heading_1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Highly Recommended</strong></p>",
+                    "type_preset": "paragraph",
+                    "padding-block-start": 0,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "quote_1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>“Good fit, nice design, and quick delivery. Will shop here again.”</p>",
+                    "type_preset": "paragraph",
+                    "padding-block-start": 0,
+                    "padding-block-end": 16,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "author_1": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Brandon L. (New York, USA)</strong> &nbsp;1 days ago</p>",
+                    "type_preset": "paragraph",
+                    "font_size": "0.8rem",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                }
+              },
+              "block_order": ["stars_1", "heading_1", "quote_1", "author_1"]
+            },
+            "review_2": {
+              "type": "_card",
+              "name": "t:names.card",
+              "settings": {
+                "background_color": "#e8e8e8",
+                "padding-block-start": 20,
+                "padding-block-end": 20,
+                "padding-inline-start": 20,
+                "padding-inline-end": 20
+              },
+              "blocks": {
+                "stars_2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<span style=\"display:inline-flex;gap:2px;\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg></span>",
+                    "padding-block-start": 0,
+                    "padding-block-end": 12,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "heading_2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Perfect Fit</strong></p>",
+                    "type_preset": "paragraph",
+                    "padding-block-start": 0,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "quote_2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>“Great quality and fast shipping. Everything arrived just as expected.”</p>",
+                    "type_preset": "paragraph",
+                    "padding-block-start": 0,
+                    "padding-block-end": 16,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "author_2": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Emily R. (California, USA)</strong> &nbsp;2 days ago</p>",
+                    "type_preset": "paragraph",
+                    "font_size": "0.8rem",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                }
+              },
+              "block_order": ["stars_2", "heading_2", "quote_2", "author_2"]
+            },
+            "review_3": {
+              "type": "_card",
+              "name": "t:names.card",
+              "settings": {
+                "background_color": "#e8e8e8",
+                "padding-block-start": 20,
+                "padding-block-end": 20,
+                "padding-inline-start": 20,
+                "padding-inline-end": 20
+              },
+              "blocks": {
+                "stars_3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<span style=\"display:inline-flex;gap:2px;\"><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg><svg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"20\" height=\"20\" fill=\"#00b67a\"/><path d=\"M10 3l1.5 3.6 3.9.3-3 2.5 1 3.8-3.4-2.1-3.4 2.1 1-3.8-3-2.5 3.9-.3z\" fill=\"#fff\"/></svg></span>",
+                    "padding-block-start": 0,
+                    "padding-block-end": 12,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "heading_3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Great Quality</strong></p>",
+                    "type_preset": "paragraph",
+                    "padding-block-start": 0,
+                    "padding-block-end": 8,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "quote_3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p>“Very comfortable and stylish. I've already ordered another pair!”</p>",
+                    "type_preset": "paragraph",
+                    "padding-block-start": 0,
+                    "padding-block-end": 16,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                },
+                "author_3": {
+                  "type": "text",
+                  "settings": {
+                    "text": "<p><strong>Jason M. (Texas, USA)</strong> &nbsp;10 days ago</p>",
+                    "type_preset": "paragraph",
+                    "font_size": "0.8rem",
+                    "padding-block-start": 0,
+                    "padding-block-end": 0,
+                    "padding-inline-start": 0,
+                    "padding-inline-end": 0
+                  }
+                }
+              },
+              "block_order": ["stars_3", "heading_3", "quote_3", "author_3"]
+            }
+          },
+          "block_order": ["review_1", "review_2", "review_3"]
+        }
+      }
     }
   ]
 }
