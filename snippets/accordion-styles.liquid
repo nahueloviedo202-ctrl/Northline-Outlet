@@ -54,6 +54,16 @@
     min-height: var(--minimum-touch-target);
   }
 
+  .accordion--has-mobile-font-size .details__header {
+    font-size: var(--summary-font-size-mobile, var(--summary-font-size));
+  }
+
+  @media screen and (min-width: 750px) {
+    .accordion--has-mobile-font-size .details__header {
+      font-size: var(--summary-font-size);
+    }
+  }
+
   .details__icon {
     height: auto;
     margin-inline-end: var(--margin-xs);
