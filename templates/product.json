@@ -1081,10 +1081,126 @@
         "padding-block-start": 50,
         "padding-block-end": 50
       }
+    },
+    "image_text_panel_xcdrUd": {
+      "type": "image-text-panel",
+      "blocks": {
+        "text_EpHAiB": {
+          "type": "text",
+          "name": "Subheading",
+          "settings": {
+            "text": "<p>Northline Outlet</p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "normal",
+            "letter_spacing": "loose",
+            "case": "uppercase",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 20,
+            "padding-block-end": 0,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20
+          },
+          "blocks": {}
+        },
+        "text_4YnJKw": {
+          "type": "text",
+          "name": "Heading",
+          "settings": {
+            "text": "<h3><strong>Where Style Meets Savings</strong></h3>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-heading--family)",
+            "font_size": "1.5rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20
+          },
+          "blocks": {}
+        },
+        "text_fCtAeh": {
+          "type": "text",
+          "name": "Text",
+          "settings": {
+            "text": "<p>Northline Outlet was founded with a simple mission: to make fashion accessible to everyone. Based in the heart of the CANADA, our store offers the latest trends at unbeatable prices. From stylish everyday clothing to the best footwear for your daily life, Northline Outlet combines quality, style, and affordable prices, helping our customers look their best without breaking the bank.</p>",
+            "width": "100%",
+            "max_width": "none",
+            "alignment": "left",
+            "type_preset": "custom",
+            "font": "var(--font-body--family)",
+            "font_size": "1.125rem",
+            "line_height": "normal",
+            "letter_spacing": "normal",
+            "case": "none",
+            "wrap": "pretty",
+            "text_color": "",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 20,
+            "padding-inline-start": 20,
+            "padding-inline-end": 20
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "text_EpHAiB",
+        "text_4YnJKw",
+        "text_fCtAeh"
+      ],
+      "name": "Image with text panel",
+      "settings": {
+        "media_type": "image",
+        "image": "shopify://shop_images/gwCbF.jpg",
+        "focal_point": "center",
+        "content_position": "left",
+        "vertical_position": "bottom",
+        "section_height": "small",
+        "section_height_custom": 550,
+        "content_offset": 12,
+        "content_width": 380,
+        "panel_background_color": "#ffffff",
+        "panel_text_color": "",
+        "panel_framed": false,
+        "frame_color": "",
+        "frame_width": 10,
+        "border_radius": 0,
+        "padding-block-start": 30,
+        "padding-block-end": 0,
+        "padding-inline-start": 30,
+        "padding-inline-end": 30,
+        "toggle_overlay": false,
+        "overlay_color": "#00000026",
+        "overlay_style": "solid",
+        "gradient_direction": "to top",
+        "image_height_mobile": 240
+      }
     }
   },
   "order": [
     "main",
-    "section_aHyDYE"
+    "section_aHyDYE",
+    "image_text_panel_xcdrUd"
   ]
 }
