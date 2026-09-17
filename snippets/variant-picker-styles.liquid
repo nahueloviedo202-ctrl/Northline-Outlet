@@ -154,6 +154,8 @@
   .variant-option--dropdowns > label,
   .variant-option[data-testid='variant-option-single'] {
     color: var(--variant-option-label-color, var(--color-foreground));
+    font-size: var(--variant-option-label-font-size, inherit);
+    text-transform: var(--variant-option-label-case, none);
   }
 
   .variant-option__swatch-value {
@@ -207,6 +209,7 @@
     padding-inline: var(--padding-lg);
     border: var(--options-border-width) solid var(--color-variant-border);
     border-radius: var(--options-border-radius);
+    font-size: var(--variant-option-button-font-size, inherit);
     overflow: clip;
     justify-content: center;
     min-height: 3.25em;

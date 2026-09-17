@@ -36,6 +36,20 @@
         --variant-option-label-color: rgba({{ block_settings.option_label_text_color.rgba }});
         --variant-option-label-color-subdued: rgba({{ block_settings.option_label_text_color.rgb }} / var(--opacity-subdued-text));
       {% endif %}
+      {% if block_settings.option_label_font_size != blank %}
+        --variant-option-label-font-size: {{ block_settings.option_label_font_size }};
+      {% endif %}
+      --variant-option-label-case: {% if block_settings.option_label_uppercase %}uppercase{% else %}none{% endif %};
+      {% if block_settings.button_text_font_size != blank %}
+        --variant-option-button-font-size: {{ block_settings.button_text_font_size }};
+      {% endif %}
+      {% if block_settings.border_radius != blank %}
+        --variant-picker-button-radius: {{ block_settings.border_radius }}px;
+        --variant-picker-swatch-radius: {{ block_settings.border_radius }}px;
+      {% endif %}
+      {% if block_settings.border_width != blank %}
+        --variant-picker-button-border-width: {{ block_settings.border_width }}px;
+      {% endif %}
     "
     data-section-id="{{ section.id }}"
     data-product-id="{{ product_resource.id }}"

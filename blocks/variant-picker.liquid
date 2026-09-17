@@ -55,6 +55,60 @@
     },
     {
       "type": "select",
+      "id": "option_label_font_size",
+      "label": "Label size",
+      "options": [
+        { "value": "0.75rem", "label": "12px" },
+        { "value": "0.875rem", "label": "14px" },
+        { "value": "1rem", "label": "16px" },
+        { "value": "1.125rem", "label": "18px" }
+      ],
+      "default": "1rem"
+    },
+    {
+      "type": "checkbox",
+      "id": "option_label_uppercase",
+      "label": "Uppercase labels",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "button_text_font_size",
+      "label": "Button text size",
+      "options": [
+        { "value": "0.75rem", "label": "12px" },
+        { "value": "0.875rem", "label": "14px" },
+        { "value": "1rem", "label": "16px" },
+        { "value": "1.125rem", "label": "18px" }
+      ],
+      "default": "1rem"
+    },
+    {
+      "type": "header",
+      "content": "t:content.borders"
+    },
+    {
+      "type": "range",
+      "id": "border_radius",
+      "label": "t:settings.border_radius",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "border_width",
+      "label": "t:settings.border_width",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "unit": "px",
+      "default": 1
+    },
+    {
+      "type": "select",
       "id": "variant_style_class",
       "label": "t:settings.variant_button_style",
       "options": [
