@@ -29,20 +29,20 @@
   endif
 %}
 
-{%- liquid
-  if section.settings.panel_background_color != blank
-    render 'contrast-override',
-      background_color: section.settings.panel_background_color,
-      text_color: section.settings.panel_text_color,
-      border_color: section.settings.frame_color,
-      section_id: section.id
-  elsif section.settings.panel_text_color != blank
-    render 'contrast-override',
-      text_color: section.settings.panel_text_color,
-      border_color: section.settings.frame_color,
-      section_id: section.id
-  endif
--%}
+{%- if section.settings.panel_background_color != blank -%}
+  {%- render 'contrast-override',
+    background_color: section.settings.panel_background_color,
+    text_color: section.settings.panel_text_color,
+    border_color: section.settings.frame_color,
+    section_id: section.id
+  -%}
+{%- elsif section.settings.panel_text_color != blank -%}
+  {%- render 'contrast-override',
+    text_color: section.settings.panel_text_color,
+    border_color: section.settings.frame_color,
+    section_id: section.id
+  -%}
+{%- endif -%}
 
 <div
   class="image-text-panel image-text-panel--pos-{{ section.settings.content_position }} image-text-panel--valign-{{ section.settings.vertical_position }}{% if section.settings.panel_framed %} image-text-panel--framed{% endif %}"
