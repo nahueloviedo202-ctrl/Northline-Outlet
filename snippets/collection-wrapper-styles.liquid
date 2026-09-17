@@ -48,6 +48,14 @@
     }
   }
 
+  /* Align the vertical filters' count/sort bar with the product grid instead of
+     spanning the sidebar too, so it reads as part of the grid, not a full-width bar. */
+  .collection-wrapper:has(.facets--vertical) .facets.facets-controls-wrapper {
+    @media screen and (min-width: 750px) {
+      grid-column: var(--facets-vertical-col-width) / var(--full-width-column-number);
+    }
+  }
+
   .collection-wrapper:has(.facets-block-wrapper--vertical:not(#filters-drawer)):has(.collection-wrapper--full-width) {
     @media screen and (min-width: 750px) {
       grid-column: 1 / -1;

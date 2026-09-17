@@ -112,7 +112,7 @@
       class="facets facets--horizontal facets-controls-wrapper spacing-style{% if has_custom_color %} color-custom-{{ block.id }}{% endif %}"
       style="{% render 'spacing-style', settings: block_settings %}{% if block_settings.text_label_case == 'uppercase' %} --facet-label-transform: uppercase;{% endif %}"
     >
-      {% if block_settings.enable_filtering %}
+      {% if block_settings.enable_filtering and block_settings.show_filters_title %}
         <h4 class="facets--filters-title">{{ 'content.filters' | t }}</h4>
       {% endif %}
 
@@ -1324,6 +1324,13 @@
       ],
       "default": "horizontal",
       "visible_if": "{{ block.settings.enable_filtering == true }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_filters_title",
+      "label": "Show \"Filters\" title",
+      "default": false,
+      "visible_if": "{{ block.settings.enable_filtering == true and block.settings.filter_style == 'vertical' }}"
     },
     {
       "type": "select",
