@@ -639,7 +639,7 @@
                 "icon": "caret",
                 "dividers": true,
                 "divider_color": "",
-                "type_preset": "h5",
+                "type_preset": "",
                 "font_size": "1rem",
                 "font_size_mobile": "",
                 "background_color": "",
