@@ -198,6 +198,7 @@
                 "show_sale_price_first": true,
                 "show_installments": false,
                 "show_tax_info": false,
+                "show_savings_badge": false,
                 "type_preset": "custom",
                 "width": "100%",
                 "alignment": "left",
@@ -297,6 +298,7 @@
                 "type_preset": "rte",
                 "font": "var(--font-body--family)",
                 "font_size": "",
+                "font_size_mobile": "",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
@@ -386,6 +388,7 @@
       "block_order": [
         "group_Ui3aTp"
       ],
+      "disabled": true,
       "name": "t:names.collections_grid",
       "settings": {
         "collection_list": [
