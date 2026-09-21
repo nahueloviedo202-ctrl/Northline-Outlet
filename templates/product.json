@@ -1396,7 +1396,7 @@
         "image": "shopify://shop_images/gwCbF.jpg",
         "focal_point": "center",
         "content_position": "left",
-        "vertical_position": "bottom",
+        "vertical_position": "center",
         "section_height": "small",
         "section_height_custom": 550,
         "content_offset": 12,
