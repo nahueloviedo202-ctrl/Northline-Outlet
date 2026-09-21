@@ -978,13 +978,13 @@
       "name": "Testimonial carousel",
       "settings": {
         "content_vertical_align": "center",
-        "sidebar_width": 20,
+        "sidebar_width": 29,
         "columns": 3,
         "columns_mobile": 1,
         "slide_gap": 12,
         "slide_gap_mobile": 16,
         "autoplay": true,
-        "autoplay_speed": 4000,
+        "autoplay_speed": 3000,
         "icons_style": "arrow",
         "icons_shape": "circle",
         "slide_bg_color": "{{ settings.color_palette.color2 }}",
@@ -1306,6 +1306,7 @@
         "text_EpHAiB": {
           "type": "text",
           "name": "Subheading",
+          "disabled": true,
           "settings": {
             "text": "<p>Northline Outlet</p>",
             "width": "100%",
@@ -1333,6 +1334,7 @@
         "text_4YnJKw": {
           "type": "text",
           "name": "Heading",
+          "disabled": true,
           "settings": {
             "text": "<h3><strong>Where Style Meets Savings</strong></h3>",
             "width": "100%",
@@ -1360,6 +1362,7 @@
         "text_fCtAeh": {
           "type": "text",
           "name": "Text",
+          "disabled": true,
           "settings": {
             "text": "<p>Northline Outlet was founded with a simple mission: to make fashion accessible to everyone. Based in the heart of the CANADA, our store offers the latest trends at unbeatable prices. From stylish everyday clothing to the best footwear for your daily life, Northline Outlet combines quality, style, and affordable prices, helping our customers look their best without breaking the bank.</p>",
             "width": "100%",
