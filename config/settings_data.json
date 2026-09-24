@@ -122,6 +122,11 @@
           "switch_on_hover": true,
           "preselect_variant": false
         }
+      },
+      "6319715395561037789": {
+        "type": "shopify://apps/trackify-x/blocks/app-embed/f3561b5a-1d26-4c4b-9d29-6bae914fb95d",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_palette": {
