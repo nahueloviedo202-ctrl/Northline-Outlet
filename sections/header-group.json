@@ -107,9 +107,9 @@
           "settings": {
             "text": "Free Shipping / Over 9,700 Satisfied Customers",
             "link": "",
-            "font": "var(--font-heading--family)",
+            "font": "var(--font-body--family)",
             "font_size": "1rem",
-            "weight": "600",
+            "weight": "700",
             "letter_spacing": "normal",
             "case": "uppercase",
             "text_color": ""
