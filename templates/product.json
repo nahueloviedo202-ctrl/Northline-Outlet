@@ -663,14 +663,32 @@
             "custom_liquid_rVLVrF": {
               "type": "custom-liquid",
               "name": "t:names.custom_liquid",
+              "disabled": true,
               "settings": {
                 "custom_liquid": "<div data-banner=\"\" data-type=\"product-page\" data-id=\"e0dbcfea-e7d4-4941-b8a5-e761b6bb733a\" style=\"width: 100%; padding: 16px calc(16px); border: 0px solid rgb(197, 200, 209); border-radius: 3px; display: flex; justify-content: space-between; align-items: center; gap: 10px; position: relative; margin-top: 20px !important; margin-bottom: 20px !important; background: #FBEAE6 !important;\">\n  \n  <div id=\"text_container\" style=\"\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-start;\n      align-items: flex-start;\n      flex: 1;\n      gap: 2px;\n    \">\n    <span id=\"title\" style=\"\n        display: block;\n        font-weight: 600;\n        font-size: 16px;\n        color: #C20000; \n        margin: 0;\n        line-height: 1.4;\n        word-wrap: break-word;\n        max-width: 100%;\n      \">UPDATE: <span style=\"font-weight: 400;\">Due to high demand for our last ever Summer Sale, only 8 items remain at the current price. If you can still press “ADD TO CART,” the product is available. If not, we sincerely apologise.\n      </span>\n    </span>\n  </div>\n</div>"
+              },
+              "blocks": {}
+            },
+            "custom_liquid_q9ypiJ": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<div class=\"northline-urgency\">\n  <span class=\"northline-urgency-label\">HIGH DEMAND:</span>\n  <span>Following the overwhelming response to our latest sale, only 8 items remain at this price. <strong>Order now before they're gone.</strong></span>\n</div>\n\n<style>\n  .northline-urgency {\n    width: 100%;\n    padding: 13px 16px;\n    background: #f6ebeb;\n    border-left: 3px solid #b20d16;\n    color: #a80d14;\n    font-family: inherit;\n    font-size: 15px;\n    line-height: 1.5;\n    box-sizing: border-box;\n  }\n\n  .northline-urgency-label {\n    font-weight: 700;\n    margin-right: 4px;\n  }\n\n  .northline-urgency strong {\n    font-weight: 700;\n  }\n\n  @media (max-width: 480px) {\n    .northline-urgency {\n      padding: 11px 12px;\n      font-size: 13px;\n    }\n  }\n</style>"
+              },
+              "blocks": {}
+            },
+            "custom_liquid_wmDJGW": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<!-- NORTHLINE OUTLET | MINIMAL PRODUCT ACCORDION -->\n<div class=\"northline-info\" id=\"northline-product-info\">\n\n  <style>\n    #northline-product-info {\n      width: 100%;\n      margin: 20px 0;\n      background: #ffffff;\n      color: #171717;\n      font-family: inherit;\n      border-top: 1px solid #dedede;\n    }\n\n    #northline-product-info * {\n      box-sizing: border-box;\n    }\n\n    #northline-product-info .nl-info-item {\n      margin: 0;\n      border-bottom: 1px solid #dedede;\n    }\n\n    #northline-product-info .nl-info-heading {\n      list-style: none;\n      display: flex;\n      align-items: center;\n      justify-content: space-between;\n      gap: 16px;\n      padding: 20px 2px;\n      cursor: pointer;\n      font-size: 15px;\n      line-height: 1.4;\n      font-weight: 500;\n      letter-spacing: 1.15px;\n      text-transform: uppercase;\n      transition: color 0.2s ease;\n    }\n\n    #northline-product-info .nl-info-heading::-webkit-details-marker {\n      display: none;\n    }\n\n    #northline-product-info .nl-info-heading:hover {\n      color: #666666;\n    }\n\n    #northline-product-info .nl-info-chevron {\n      width: 9px;\n      height: 9px;\n      flex-shrink: 0;\n      border-right: 1.5px solid currentColor;\n      border-bottom: 1.5px solid currentColor;\n      transform: rotate(45deg);\n      transition: transform 0.25s ease;\n      margin: -5px 4px 0 0;\n    }\n\n    #northline-product-info details[open] .nl-info-chevron {\n      transform: rotate(225deg);\n      margin-top: 5px;\n    }\n\n    #northline-product-info .nl-info-content {\n      padding: 0 2px 22px;\n      font-size: 14px;\n      line-height: 1.8;\n      color: #555555;\n    }\n\n    #northline-product-info .nl-info-content p {\n      margin: 0 0 10px;\n    }\n\n    #northline-product-info .nl-info-content p:last-child {\n      margin-bottom: 0;\n    }\n\n    #northline-product-info .nl-info-content strong {\n      color: #171717;\n      font-weight: 500;\n    }\n\n    #northline-product-info .nl-info-content a {\n      color: #171717;\n      text-decoration: underline;\n      text-underline-offset: 3px;\n    }\n\n    @media (max-width: 480px) {\n      #northline-product-info {\n        margin: 16px 0;\n      }\n\n      #northline-product-info .nl-info-heading {\n        padding: 18px 1px;\n        font-size: 13px;\n        letter-spacing: 0.9px;\n      }\n\n      #northline-product-info .nl-info-content {\n        font-size: 13px;\n        padding-bottom: 18px;\n      }\n    }\n\n    @media (prefers-reduced-motion: reduce) {\n      #northline-product-info * {\n        transition: none !important;\n      }\n    }\n  </style>\n\n  <!-- 1. SIZE -->\n  <details class=\"nl-info-item\">\n    <summary class=\"nl-info-heading\">\n      <span>Size &amp; Fit</span>\n      <span class=\"nl-info-chevron\" aria-hidden=\"true\"></span>\n    </summary>\n\n    <div class=\"nl-info-content\">\n      <p>Our shoes are designed for a comfortable, everyday fit. We recommend ordering your usual size.</p>\n      <p>If you need help choosing your size, please contact our support team before placing your order.</p>\n    </div>\n  </details>\n\n  <!-- 2. SHIPPING -->\n  <details class=\"nl-info-item\">\n    <summary class=\"nl-info-heading\">\n      <span>Shipping Information</span>\n      <span class=\"nl-info-chevron\" aria-hidden=\"true\"></span>\n    </summary>\n\n    <div class=\"nl-info-content\">\n      <p><strong>Free home delivery.</strong> Shipping is free on your order.</p>\n      <p>Orders are typically processed and shipped within 7–10 days. Delivery times may vary depending on your location.</p>\n      <p>For questions about an existing order, contact us at <a href=\"mailto:contact@northlineoutlet.com\">contact@northlineoutlet.com</a>.</p>\n    </div>\n  </details>\n\n  <!-- 3. RETURNS -->\n  <details class=\"nl-info-item\">\n    <summary class=\"nl-info-heading\">\n      <span>30-Day Risk-Free Trial</span>\n      <span class=\"nl-info-chevron\" aria-hidden=\"true\"></span>\n    </summary>\n\n    <div class=\"nl-info-content\">\n      <p>We want you to feel confident with your purchase. If you're not satisfied, you can contact our support team within 30 days of delivery to start a return.</p>\n      <p>Returns are subject to our return policy and applicable conditions.</p>\n    </div>\n  </details>\n\n</div>"
               },
               "blocks": {}
             },
             "accordion_kEfJBd": {
               "type": "accordion",
               "name": "t:names.accordion",
+              "disabled": true,
               "settings": {
                 "icon": "caret",
                 "dividers": true,
@@ -869,6 +887,8 @@
             "buy_buttons_eYQEYi",
             "text_GPxrE7",
             "custom_liquid_rVLVrF",
+            "custom_liquid_q9ypiJ",
+            "custom_liquid_wmDJGW",
             "accordion_kEfJBd",
             "custom_liquid_hPAWN8",
             "text_aEtTtq"
