@@ -1171,6 +1171,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "Testimonial carousel",
       "settings": {
         "content_vertical_align": "center",
@@ -1206,6 +1207,206 @@
         "background_color": "#e8e8e8",
         "padding-block-start": 48,
         "padding-block-end": 48
+      }
+    },
+    "ss_testimonials_ss_test_5a097f3d_RRfy9q": {
+      "type": "ss-testimonials---ss-test-5a097f3d",
+      "blocks": {
+        "sub_heading_GGC7qz": {
+          "type": "sub_heading",
+          "settings": {
+            "sub_heading": "<p>OVER 9,700 SATISFIED CUSTOMERS</p>",
+            "sub_heading_custom": false,
+            "sub_heading_font": "josefin_sans_n4",
+            "sub_heading_size": 12,
+            "sub_heading_size_mobile": 12,
+            "sub_heading_advanced": false,
+            "sub_heading_height": 130,
+            "sub_heading_mt": 0,
+            "sub_heading_mt_mobile": 0,
+            "background": true,
+            "sub_heading_radius": 100,
+            "sub_heading_border_thickness": 0,
+            "sub_heading_padding_horizontal": 16,
+            "sub_heading_padding_horizontal_mobile": 12,
+            "sub_heading_padding_vertical": 8,
+            "sub_heading_padding_vertical_mobile": 6,
+            "sub_heading_color": "#151515",
+            "sub_heading_bg_color": "#ffffff",
+            "sub_heading_border_color": "#151515"
+          }
+        },
+        "heading_ak3aGd": {
+          "type": "heading",
+          "settings": {
+            "heading": "<h2>Real runners, real <strong>comfort</strong></h2>",
+            "heading_custom": false,
+            "heading_font": "josefin_sans_n4",
+            "heading_accent_font": "playfair_n4",
+            "heading_size": 44,
+            "heading_size_mobile": 30,
+            "heading_advanced": false,
+            "heading_height": 120,
+            "heading_mt": 16,
+            "heading_mt_mobile": 16,
+            "heading_color": "#151515",
+            "heading_accent_color": "#6b6f69"
+          }
+        },
+        "text_zefKgF": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Hear from customers who made the switch to cushioned, supportive footwear and haven't looked back.</p>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 18,
+            "text_size_mobile": 16,
+            "text_advanced": false,
+            "text_height": 150,
+            "text_max_width": 70,
+            "text_max_width_mobile": 100,
+            "text_mt": 16,
+            "text_mt_mobile": 16,
+            "text_color": "#151515"
+          }
+        },
+        "testimonial_waxVn7": {
+          "type": "testimonial",
+          "settings": {
+            "stars_count": 5,
+            "text": "<p>I'm on my feet all day at the clinic and these Vomeros feel like walking on clouds. Paid under $25 and the cushioning is unreal. Ordered a second pair in Hyper Pink!</p>",
+            "author": "Danielle Brooks",
+            "subcopy_author": "Verified buyer · Nurse",
+            "author_image": "shopify://shop_images/ai-section-10589-4-author-image-1.png"
+          }
+        },
+        "testimonial_UdDeBW": {
+          "type": "testimonial",
+          "settings": {
+            "stars_count": 5,
+            "text": "<p>Arrived fast with free UPS delivery. The fit was true to size and my knees noticed the difference on my first morning run. Great value.</p>",
+            "author": "Marcus Whitfield",
+            "subcopy_author": "Verified buyer · Weekend runner",
+            "author_image": "shopify://shop_images/ai-section-10589-5-author-image-2.png"
+          }
+        },
+        "testimonial_CQpt4K": {
+          "type": "testimonial",
+          "settings": {
+            "stars_count": 5,
+            "text": "<p>The Trim to Fit insoles were easy to cut and made my everyday sneakers so much more comfortable. Support all day without any break-in pain.</p>",
+            "author": "Tomasz Kowalski",
+            "subcopy_author": "Verified buyer · Warehouse worker",
+            "author_image": "shopify://shop_images/ai-section-10589-6-author-image-3.png"
+          }
+        },
+        "testimonial_ta79xr": {
+          "type": "testimonial",
+          "settings": {
+            "stars_count": 4.5,
+            "text": "<p>Was nervous about ordering online, but the 30-day trial made it risk-free. Kept them, and I get compliments on the Blue Tint pair every week.</p>",
+            "author": "Renee Alvarado",
+            "subcopy_author": "Verified buyer · Teacher",
+            "author_image": "shopify://shop_images/ai-section-10589-7-author-image-4.png"
+          }
+        }
+      },
+      "block_order": [
+        "sub_heading_GGC7qz",
+        "heading_ak3aGd",
+        "text_zefKgF",
+        "testimonial_waxVn7",
+        "testimonial_UdDeBW",
+        "testimonial_CQpt4K",
+        "testimonial_ta79xr"
+      ],
+      "name": "SS - Testimonial #48 AI",
+      "settings": {
+        "content_align": "center",
+        "content_align_mobile": "center",
+        "scrolling_velocity": 36,
+        "scrolling_velocity_mobile": 36,
+        "reverse_direction": false,
+        "pause_hover": true,
+        "slider_advanced": false,
+        "scrolling_gap": 16,
+        "scrolling_gap_mobile": 16,
+        "cards_mt": 32,
+        "cards_mt_mobile": 16,
+        "card_padding_advanced": false,
+        "card_width": 300,
+        "card_width_mobile": 280,
+        "card_padding_horizontal": 16,
+        "card_padding_horizontal_mobile": 16,
+        "card_padding_vertical": 16,
+        "card_padding_vertical_mobile": 16,
+        "card_radius": 14,
+        "card_border_thickness": 0,
+        "card_shadow": true,
+        "card_shadow_color": "#c9cdc6",
+        "card_content_align": "left",
+        "card_content_align_mobile": "left",
+        "author_image_size": 44,
+        "author_image_size_mobile": 44,
+        "author_image_radius": 40,
+        "author_image_border_thickness": 0,
+        "author_custom": false,
+        "author_font": "josefin_sans_n4",
+        "author_size": 14,
+        "author_size_mobile": 14,
+        "author_height": 130,
+        "subcopy_author_custom": false,
+        "subcopy_author_font": "josefin_sans_n4",
+        "subcopy_author_size": 12,
+        "subcopy_author_size_mobile": 12,
+        "subcopy_advanced": false,
+        "subcopy_author_height": 130,
+        "subcopy_author_mt": 4,
+        "subcopy_author_mt_mobile": 4,
+        "subcopy_text_length": 24,
+        "slide_stars_size": 18,
+        "slide_stars_size_mobile": 18,
+        "slide_stars_advanced": false,
+        "slide_stars_gap": 2,
+        "slide_stars_mt": 10,
+        "slide_stars_mt_mobile": 10,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 14,
+        "text_size_mobile": 14,
+        "text_advanced": false,
+        "text_height": 150,
+        "text_mt": 12,
+        "text_mt_mobile": 12,
+        "text_color": "#151515",
+        "text_bg_color": "#151515",
+        "author_color": "#151515",
+        "subcopy_author_color": "#6b6f69",
+        "card_bg_color": "#ffffff",
+        "card_border_color": "#151515",
+        "slide_stars_color": "#ffffff",
+        "slide_stars_bg_color": "#00b67a",
+        "slide_stars_bg_half_color": "#dddddd",
+        "author_image_color": "#ffffff",
+        "author_image_bg_color": "#151515",
+        "author_image_border_color": "#151515",
+        "background_style": "solid",
+        "background_color": "#eef1ea",
+        "background_gradient": "linear-gradient(180deg, #FFFFFF 0%, #F2F2F2 100%)",
+        "border_color": "#151515",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "width": "page",
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
       }
     },
     "custom_liquid_L4DcUj": {
@@ -1634,6 +1835,7 @@
     "main",
     "ss_guarantees_ss_guarantees_ai_yfn6WQ",
     "testimonial_carousel_fPVYEH",
+    "ss_testimonials_ss_test_5a097f3d_RRfy9q",
     "custom_liquid_L4DcUj",
     "section_aHyDYE",
     "image_text_panel_xcdrUd"
