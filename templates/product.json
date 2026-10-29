@@ -87,14 +87,6 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "custom_liquid_yeqQ8H": {
-              "type": "custom-liquid",
-              "name": "t:names.custom_liquid",
-              "settings": {
-                "custom_liquid": "<style>\n  .northline-trustpilot {\n    display: inline-flex;\n    align-items: center;\n    flex-wrap: wrap;\n    gap: 8px;\n    margin: 0 0 14px;\n    font-family: inherit;\n    color: #191919;\n  }\n\n  .northline-trustpilot-score {\n    font-size: 14px;\n    font-weight: 600;\n    white-space: nowrap;\n  }\n\n  .northline-trustpilot-stars {\n    display: inline-flex;\n    align-items: center;\n    gap: 2px;\n  }\n\n  .northline-trustpilot-star {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 19px;\n    height: 19px;\n    background: #00b67a;\n  }\n\n  .northline-trustpilot-star svg {\n    width: 14px;\n    height: 14px;\n    fill: #fff;\n  }\n\n  .northline-trustpilot-star.partial {\n    background: linear-gradient(\n      to right,\n      #00b67a 85%,\n      #dcdce6 85%\n    );\n  }\n\n  .northline-trustpilot-label {\n    display: inline-flex;\n    align-items: center;\n    gap: 4px;\n    font-size: 13px;\n    color: #333;\n    white-space: nowrap;\n  }\n\n  .northline-trustpilot-label strong {\n    font-weight: 700;\n  }\n\n  .northline-trustpilot-brand {\n    display: inline-flex;\n    align-items: center;\n    gap: 3px;\n    font-size: 13px;\n    font-weight: 600;\n    white-space: nowrap;\n  }\n\n  .northline-trustpilot-brand svg {\n    width: 16px;\n    height: 16px;\n    fill: #00b67a;\n  }\n\n  @media (max-width: 380px) {\n    .northline-trustpilot {\n      gap: 6px;\n    }\n\n    .northline-trustpilot-score {\n      font-size: 13px;\n    }\n\n    .northline-trustpilot-star {\n      width: 17px;\n      height: 17px;\n    }\n\n    .northline-trustpilot-star svg {\n      width: 12px;\n      height: 12px;\n    }\n\n    .northline-trustpilot-label,\n    .northline-trustpilot-brand {\n      font-size: 12px;\n    }\n  }\n</style>\n\n<div class=\"northline-trustpilot\"\n     aria-label=\"Customer rating: 4.85 out of 5\">\n\n  <span class=\"northline-trustpilot-score\">4.85/5</span>\n\n  <span class=\"northline-trustpilot-stars\"\n        role=\"img\"\n        aria-label=\"4.85 out of 5 stars\">\n\n    <span class=\"northline-trustpilot-star\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"m12 2.5 3 6.1 6.7 1-4.85 4.75L18 21l-6-3.2L6 21l1.15-6.65L2.3 9.6l6.7-1z\"/>\n      </svg>\n    </span>\n\n    <span class=\"northline-trustpilot-star\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"m12 2.5 3 6.1 6.7 1-4.85 4.75L18 21l-6-3.2L6 21l1.15-6.65L2.3 9.6l6.7-1z\"/>\n      </svg>\n    </span>\n\n    <span class=\"northline-trustpilot-star\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"m12 2.5 3 6.1 6.7 1-4.85 4.75L18 21l-6-3.2L6 21l1.15-6.65L2.3 9.6l6.7-1z\"/>\n      </svg>\n    </span>\n\n    <span class=\"northline-trustpilot-star\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"m12 2.5 3 6.1 6.7 1-4.85 4.75L18 21l-6-3.2L6 21l1.15-6.65L2.3 9.6l6.7-1z\"/>\n      </svg>\n    </span>\n\n    <span class=\"northline-trustpilot-star partial\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"m12 2.5 3 6.1 6.7 1-4.85 4.75L18 21l-6-3.2L6 21l1.15-6.65L2.3 9.6l6.7-1z\"/>\n      </svg>\n    </span>\n\n  </span>\n\n  <span class=\"northline-trustpilot-label\">\n    <strong>Excellent</strong>\n  </span>\n\n  <span class=\"northline-trustpilot-brand\">\n    <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\">\n      <path d=\"m12 1.5 2.8 7.1 7.7.3-6 4.8 2.1 7.4-6.6-4.2-6.6 4.2 2.1-7.4-6-4.8 7.7-.3z\"/>\n    </svg>\n    Trustpilot\n  </span>\n\n</div>"
-              },
-              "blocks": {}
-            },
             "group_icgrde": {
               "type": "group",
               "name": "t:names.header",
@@ -135,6 +127,14 @@
                 "padding-inline-end": 0
               },
               "blocks": {
+                "custom_liquid_dwNGpw": {
+                  "type": "custom-liquid",
+                  "name": "t:names.custom_liquid",
+                  "settings": {
+                    "custom_liquid": "<style>\n  .northline-trustpilot {\n    display: inline-flex;\n    align-items: center;\n    flex-wrap: wrap;\n    gap: 8px;\n    margin: 0 0 14px;\n    font-family: inherit;\n    color: #191919;\n  }\n\n  .northline-trustpilot-score {\n    font-size: 14px;\n    font-weight: 600;\n    white-space: nowrap;\n  }\n\n  .northline-trustpilot-stars {\n    display: inline-flex;\n    align-items: center;\n    gap: 2px;\n  }\n\n  .northline-trustpilot-star {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 19px;\n    height: 19px;\n    background: #00b67a;\n  }\n\n  .northline-trustpilot-star svg {\n    width: 14px;\n    height: 14px;\n    fill: #fff;\n  }\n\n  .northline-trustpilot-star.partial {\n    background: linear-gradient(\n      to right,\n      #00b67a 85%,\n      #dcdce6 85%\n    );\n  }\n\n  .northline-trustpilot-label {\n    display: inline-flex;\n    align-items: center;\n    gap: 4px;\n    font-size: 13px;\n    color: #333;\n    white-space: nowrap;\n  }\n\n  .northline-trustpilot-label strong {\n    font-weight: 700;\n  }\n\n  .northline-trustpilot-brand {\n    display: inline-flex;\n    align-items: center;\n    gap: 3px;\n    font-size: 13px;\n    font-weight: 600;\n    white-space: nowrap;\n  }\n\n  .northline-trustpilot-brand svg {\n    width: 16px;\n    height: 16px;\n    fill: #00b67a;\n  }\n\n  @media (max-width: 380px) {\n    .northline-trustpilot {\n      gap: 6px;\n    }\n\n    .northline-trustpilot-score {\n      font-size: 13px;\n    }\n\n    .northline-trustpilot-star {\n      width: 17px;\n      height: 17px;\n    }\n\n    .northline-trustpilot-star svg {\n      width: 12px;\n      height: 12px;\n    }\n\n    .northline-trustpilot-label,\n    .northline-trustpilot-brand {\n      font-size: 12px;\n    }\n  }\n</style>\n\n<div class=\"northline-trustpilot\"\n     aria-label=\"Customer rating: 4.85 out of 5\">\n\n  <span class=\"northline-trustpilot-score\">4.85/5</span>\n\n  <span class=\"northline-trustpilot-stars\"\n        role=\"img\"\n        aria-label=\"4.85 out of 5 stars\">\n\n    <span class=\"northline-trustpilot-star\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"m12 2.5 3 6.1 6.7 1-4.85 4.75L18 21l-6-3.2L6 21l1.15-6.65L2.3 9.6l6.7-1z\"/>\n      </svg>\n    </span>\n\n    <span class=\"northline-trustpilot-star\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"m12 2.5 3 6.1 6.7 1-4.85 4.75L18 21l-6-3.2L6 21l1.15-6.65L2.3 9.6l6.7-1z\"/>\n      </svg>\n    </span>\n\n    <span class=\"northline-trustpilot-star\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"m12 2.5 3 6.1 6.7 1-4.85 4.75L18 21l-6-3.2L6 21l1.15-6.65L2.3 9.6l6.7-1z\"/>\n      </svg>\n    </span>\n\n    <span class=\"northline-trustpilot-star\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"m12 2.5 3 6.1 6.7 1-4.85 4.75L18 21l-6-3.2L6 21l1.15-6.65L2.3 9.6l6.7-1z\"/>\n      </svg>\n    </span>\n\n    <span class=\"northline-trustpilot-star partial\">\n      <svg viewBox=\"0 0 24 24\">\n        <path d=\"m12 2.5 3 6.1 6.7 1-4.85 4.75L18 21l-6-3.2L6 21l1.15-6.65L2.3 9.6l6.7-1z\"/>\n      </svg>\n    </span>\n\n  </span>\n\n  <span class=\"northline-trustpilot-label\">\n    <strong>Excellent</strong>\n  </span>\n\n  <span class=\"northline-trustpilot-brand\">\n    <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\">\n      <path d=\"m12 1.5 2.8 7.1 7.7.3-6 4.8 2.1 7.4-6.6-4.2-6.6 4.2 2.1-7.4-6-4.8 7.7-.3z\"/>\n    </svg>\n    Trustpilot\n  </span>\n\n</div>"
+                  },
+                  "blocks": {}
+                },
                 "text_xrnftG": {
                   "type": "text",
                   "name": "t:names.product_title",
@@ -196,6 +196,7 @@
                 }
               },
               "block_order": [
+                "custom_liquid_dwNGpw",
                 "text_xrnftG",
                 "custom_liquid_B6MUnb",
                 "price_tVjtKg"
@@ -846,7 +847,6 @@
             }
           },
           "block_order": [
-            "custom_liquid_yeqQ8H",
             "group_icgrde",
             "divider_Jk6qy7",
             "custom_liquid_RzqbLD",
