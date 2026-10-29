@@ -504,7 +504,7 @@
               "blocks": {}
             },
             "kiwi_size_chart_recommender_kiwi_sizing_rKM4wU": {
-              "type": "shopify://apps/kiwi-size-chart-recommender/blocks/kiwiSizing/b7369922-bf15-44ce-a121-a22a8fcbc4b0",
+              "type": "shopify://apps/kiwi-size-chart/blocks/kiwiSizing/b7369922-bf15-44ce-a121-a22a8fcbc4b0",
               "settings": {
                 "fallbackToBlockPosition": false,
                 "waitForElementSelector": "",
@@ -842,6 +842,92 @@
         "padding-block-end": 55
       }
     },
+    "ss_guarantees_ss_guarantees_ai_yfn6WQ": {
+      "type": "ss-guarantees--ss-guarantees-ai",
+      "blocks": {
+        "rating_VdNzWN": {
+          "type": "rating",
+          "settings": {
+            "big_rating_text": "<p><strong>Excellent</strong></p>",
+            "rating_custom": false,
+            "rating_font": "josefin_sans_n4",
+            "rating_size": 15,
+            "rating_size_mobile": 13,
+            "rating_height": 150,
+            "stars_count": 5,
+            "stars_size": 24,
+            "stars_size_mobile": 18,
+            "big_rating_color": "#151515",
+            "stars_color": "#ffffff",
+            "stars_bg_color": "#1a6b34",
+            "stars_bg_half_color": "#d9ddd3"
+          }
+        },
+        "verified_wdiHPY": {
+          "type": "verified",
+          "settings": {
+            "icon_size": 22,
+            "icon_size_mobile": 20,
+            "icon": "shield_check",
+            "custom_icon": "shopify://shop_images/ai-section-10584-1-custom-icon-1.png",
+            "text": "<p><strong>RATED EXCELLENT BY 9,700+ HAPPY SHOPPERS</strong></p>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 14,
+            "text_size_mobile": 12,
+            "text_height": 150,
+            "icon_color": "#151515",
+            "text_color": "#151515"
+          }
+        },
+        "verified_DaApwz": {
+          "type": "verified",
+          "settings": {
+            "icon_size": 22,
+            "icon_size_mobile": 20,
+            "icon": "heart_hand",
+            "custom_icon": "shopify://shop_images/ai-section-10584-2-custom-icon-2.png",
+            "text": "<p><strong>30-DAY RISK-FREE TRIAL ON EVERY PAIR</strong></p>",
+            "text_custom": false,
+            "text_font": "josefin_sans_n4",
+            "text_size": 14,
+            "text_size_mobile": 12,
+            "text_height": 150,
+            "icon_color": "#151515",
+            "text_color": "#151515"
+          }
+        }
+      },
+      "block_order": [
+        "rating_VdNzWN",
+        "verified_wdiHPY",
+        "verified_DaApwz"
+      ],
+      "name": "SS - Guarantees AI",
+      "settings": {
+        "layout_radius": 14,
+        "layout_radius_mobile": 14,
+        "layout_border_thickness": 1,
+        "layout_bg_color": "#ffffff",
+        "layout_border_color": "#d9ddd3",
+        "background_style": "solid",
+        "background_color": "#eef1ea",
+        "background_gradient": "linear-gradient(180deg, #FFFFFF 0%, #F2F2F2 100%)",
+        "border_color": "#151515",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "width": "page",
+        "content_width": 1200,
+        "border_thickness": 0,
+        "section_radius": 0
+      }
+    },
     "testimonial_carousel_fPVYEH": {
       "type": "testimonial-carousel",
       "blocks": {
@@ -1037,7 +1123,7 @@
         "star_size": 18,
         "star_size_mobile": 18,
         "section_width": "page-width",
-        "background_color": "#E8E8E8",
+        "background_color": "#e8e8e8",
         "padding-block-start": 48,
         "padding-block-end": 48
       }
@@ -1454,6 +1540,7 @@
   },
   "order": [
     "main",
+    "ss_guarantees_ss_guarantees_ai_yfn6WQ",
     "testimonial_carousel_fPVYEH",
     "section_aHyDYE",
     "image_text_panel_xcdrUd"
