@@ -174,7 +174,7 @@
                     "width": "100%",
                     "alignment": "left",
                     "font": "var(--font-heading--family)",
-                    "font_size": "2rem",
+                    "font_size": "1.5rem",
                     "line_height": "tight",
                     "letter_spacing": "loose",
                     "case": "none",
@@ -206,9 +206,18 @@
               },
               "blocks": {}
             },
+            "custom_liquid_REbhYG": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<style>\n  .northline-promises {\n    width: 100%;\n    max-width: 620px;\n    margin: 20px 0;\n    padding: 6px 0;\n    color: #202020;\n    font-family: inherit;\n  }\n\n  .northline-promise {\n    display: flex;\n    align-items: center;\n    gap: 17px;\n    padding: 15px 4px;\n  }\n\n  .northline-promise + .northline-promise {\n    border-top: 1px solid #eeeeee;\n  }\n\n  .northline-promise-icon {\n    width: 45px;\n    height: 45px;\n    flex: 0 0 45px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    color: #222222;\n    background: #f6f6f4;\n    border-radius: 12px;\n  }\n\n  .northline-promise-icon svg {\n    display: block;\n    width: 25px;\n    height: 25px;\n    fill: none;\n    stroke: currentColor;\n    stroke-width: 1.65;\n    stroke-linecap: round;\n    stroke-linejoin: round;\n  }\n\n  .northline-promise-copy {\n    min-width: 0;\n  }\n\n  .northline-promise-title {\n    margin: 0 0 4px;\n    font-size: 16px;\n    font-weight: 600;\n    line-height: 1.35;\n    letter-spacing: -0.2px;\n  }\n\n  .northline-promise-description {\n    margin: 0;\n    color: #686868;\n    font-size: 13px;\n    line-height: 1.5;\n  }\n\n  .northline-promise-footer {\n    height: 1px;\n    margin-top: 9px;\n    background: #dedede;\n  }\n\n  @media (max-width: 480px) {\n    .northline-promises {\n      margin: 14px 0;\n    }\n\n    .northline-promise {\n      gap: 13px;\n      padding: 13px 2px;\n    }\n\n    .northline-promise-icon {\n      width: 41px;\n      height: 41px;\n      flex-basis: 41px;\n      border-radius: 10px;\n    }\n\n    .northline-promise-icon svg {\n      width: 23px;\n      height: 23px;\n    }\n\n    .northline-promise-title {\n      font-size: 14px;\n    }\n\n    .northline-promise-description {\n      font-size: 12px;\n    }\n  }\n</style>\n\n<div class=\"northline-promises\">\n\n  <!-- SHIPPING -->\n  <div class=\"northline-promise\">\n    <div class=\"northline-promise-icon\">\n      <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\">\n        <path d=\"M3 6h11v11H3z\"/>\n        <path d=\"M14 10h4l3 3v4h-7\"/>\n        <circle cx=\"7.5\" cy=\"18\" r=\"2\"/>\n        <circle cx=\"17.5\" cy=\"18\" r=\"2\"/>\n      </svg>\n    </div>\n\n    <div class=\"northline-promise-copy\">\n      <p class=\"northline-promise-title\">\n        Free Shipping on Your Order\n      </p>\n      <p class=\"northline-promise-description\">\n        Delivered straight to your door with trusted shipping.\n      </p>\n    </div>\n  </div>\n\n  <!-- RETURNS -->\n  <div class=\"northline-promise\">\n    <div class=\"northline-promise-icon\">\n      <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\">\n        <path d=\"M12 3 21 7.5 12 12 3 7.5 12 3Z\"/>\n        <path d=\"M3 7.5v9L12 21l9-4.5v-9\"/>\n        <path d=\"M12 12v9\"/>\n        <path d=\"m7.5 5.25 9 4.5\"/>\n      </svg>\n    </div>\n\n    <div class=\"northline-promise-copy\">\n      <p class=\"northline-promise-title\">\n        30-Day Easy Returns\n      </p>\n      <p class=\"northline-promise-description\">\n        Shop with confidence with our return policy.\n      </p>\n    </div>\n  </div>\n\n  <!-- SECURE CHECKOUT -->\n  <div class=\"northline-promise\">\n    <div class=\"northline-promise-icon\">\n      <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\">\n        <rect x=\"4\" y=\"10\" width=\"16\" height=\"11\" rx=\"2\"/>\n        <path d=\"M8 10V7a4 4 0 0 1 8 0v3\"/>\n        <path d=\"M12 14v3\"/>\n      </svg>\n    </div>\n\n    <div class=\"northline-promise-copy\">\n      <p class=\"northline-promise-title\">\n        Secure &amp; Protected Checkout\n      </p>\n      <p class=\"northline-promise-description\">\n        Your payment details are protected during checkout.\n      </p>\n    </div>\n  </div>\n\n  <div class=\"northline-promise-footer\"></div>\n\n</div>"
+              },
+              "blocks": {}
+            },
             "group_tcCMcf": {
               "type": "group",
               "name": "t:names.group",
+              "disabled": true,
               "settings": {
                 "content_direction": "row",
                 "vertical_on_mobile": false,
@@ -821,6 +830,7 @@
           "block_order": [
             "group_icgrde",
             "divider_Jk6qy7",
+            "custom_liquid_REbhYG",
             "group_tcCMcf",
             "divider_VJhene",
             "variant_picker_R3rGDr",
