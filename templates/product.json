@@ -660,14 +660,6 @@
               },
               "blocks": {}
             },
-            "custom_liquid_rVLVrF": {
-              "type": "custom-liquid",
-              "name": "t:names.custom_liquid",
-              "settings": {
-                "custom_liquid": "<div data-banner=\"\" data-type=\"product-page\" data-id=\"e0dbcfea-e7d4-4941-b8a5-e761b6bb733a\" style=\"width: 100%; padding: 16px calc(16px); border: 0px solid rgb(197, 200, 209); border-radius: 3px; display: flex; justify-content: space-between; align-items: center; gap: 10px; position: relative; margin-top: 20px !important; margin-bottom: 20px !important; background: #FBEAE6 !important;\">\n  \n  <div id=\"text_container\" style=\"\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-start;\n      align-items: flex-start;\n      flex: 1;\n      gap: 2px;\n    \">\n    <span id=\"title\" style=\"\n        display: block;\n        font-weight: 600;\n        font-size: 16px;\n        color: #C20000; \n        margin: 0;\n        line-height: 1.4;\n        word-wrap: break-word;\n        max-width: 100%;\n      \">UPDATE: <span style=\"font-weight: 400;\">Due to high demand for our last ever Summer Sale, only 8 items remain at the current price. If you can still press “ADD TO CART,” the product is available. If not, we sincerely apologise.\n      </span>\n    </span>\n  </div>\n</div>"
-              },
-              "blocks": {}
-            },
             "accordion_kEfJBd": {
               "type": "accordion",
               "name": "t:names.accordion",
@@ -818,6 +810,22 @@
                 "accordion_row_CmjajJ"
               ]
             },
+            "custom_liquid_rVLVrF": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<div data-banner=\"\" data-type=\"product-page\" data-id=\"e0dbcfea-e7d4-4941-b8a5-e761b6bb733a\" style=\"width: 100%; padding: 16px calc(16px); border: 0px solid rgb(197, 200, 209); border-radius: 3px; display: flex; justify-content: space-between; align-items: center; gap: 10px; position: relative; margin-top: 20px !important; margin-bottom: 20px !important; background: #FBEAE6 !important;\">\n  \n  <div id=\"text_container\" style=\"\n      display: flex;\n      flex-direction: column;\n      justify-content: flex-start;\n      align-items: flex-start;\n      flex: 1;\n      gap: 2px;\n    \">\n    <span id=\"title\" style=\"\n        display: block;\n        font-weight: 600;\n        font-size: 16px;\n        color: #C20000; \n        margin: 0;\n        line-height: 1.4;\n        word-wrap: break-word;\n        max-width: 100%;\n      \">UPDATE: <span style=\"font-weight: 400;\">Due to high demand for our last ever Summer Sale, only 8 items remain at the current price. If you can still press “ADD TO CART,” the product is available. If not, we sincerely apologise.\n      </span>\n    </span>\n  </div>\n</div>"
+              },
+              "blocks": {}
+            },
+            "custom_liquid_hPAWN8": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<style>\n  .nl-trust {\n    width: 100%;\n    margin: 12px 0;\n    padding: 12px;\n    font-family: inherit;\n    color: #202124;\n    background: #eef1e9;\n    box-sizing: border-box;\n  }\n\n  .nl-trust *,\n  .nl-trust *::before,\n  .nl-trust *::after {\n    box-sizing: border-box;\n  }\n\n  .nl-trust-card {\n    background: #f7f8f9;\n    border: 1px solid #d9ded4;\n    border-radius: 15px;\n    overflow: hidden;\n  }\n\n  .nl-trust-header {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 10px;\n    padding: 11px 12px;\n  }\n\n  .nl-trust-stars {\n    display: flex;\n    gap: 3px;\n    flex-shrink: 0;\n  }\n\n  .nl-trust-star {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    width: 25px;\n    height: 25px;\n    background: #176b3a;\n    color: #fff;\n    font-size: 21px;\n    line-height: 1;\n  }\n\n  .nl-trust-rating {\n    margin: 0;\n    font-size: 19px;\n    line-height: 1.2;\n    font-weight: 700;\n  }\n\n  .nl-trust-row {\n    display: grid;\n    grid-template-columns: 24px minmax(0, 1fr);\n    align-items: center;\n    gap: 11px;\n    padding: 12px 15px;\n    border-top: 1px solid #d9ded4;\n  }\n\n  .nl-trust-icon {\n    width: 20px;\n    height: 20px;\n    color: #899394;\n  }\n\n  .nl-trust-icon svg {\n    display: block;\n    width: 100%;\n    height: 100%;\n    fill: none;\n    stroke: currentColor;\n    stroke-width: 1.5;\n    stroke-linecap: round;\n    stroke-linejoin: round;\n  }\n\n  .nl-trust-text {\n    margin: 0;\n    font-size: 13px;\n    line-height: 1.45;\n    font-weight: 650;\n    letter-spacing: 0;\n  }\n\n  @media (max-width: 480px) {\n    .nl-trust {\n      padding: 9px;\n    }\n\n    .nl-trust-header {\n      gap: 8px;\n      padding: 10px 8px;\n    }\n\n    .nl-trust-star {\n      width: 22px;\n      height: 22px;\n      font-size: 18px;\n    }\n\n    .nl-trust-stars {\n      gap: 2px;\n    }\n\n    .nl-trust-rating {\n      font-size: 17px;\n    }\n\n    .nl-trust-row {\n      grid-template-columns: 21px minmax(0, 1fr);\n      gap: 9px;\n      padding: 10px 12px;\n    }\n\n    .nl-trust-icon {\n      width: 18px;\n      height: 18px;\n    }\n\n    .nl-trust-text {\n      font-size: 12px;\n      line-height: 1.4;\n    }\n  }\n</style>\n\n<div class=\"nl-trust\">\n  <div class=\"nl-trust-card\">\n\n    <!-- STAR RATING -->\n    <div class=\"nl-trust-header\">\n      <div\n        class=\"nl-trust-stars\"\n        role=\"img\"\n        aria-label=\"5 out of 5 stars\"\n      >\n        <span class=\"nl-trust-star\">★</span>\n        <span class=\"nl-trust-star\">★</span>\n        <span class=\"nl-trust-star\">★</span>\n        <span class=\"nl-trust-star\">★</span>\n        <span class=\"nl-trust-star\">★</span>\n      </div>\n\n      <p class=\"nl-trust-rating\">Excellent</p>\n    </div>\n\n    <!-- CUSTOMER TRUST -->\n    <div class=\"nl-trust-row\">\n      <span class=\"nl-trust-icon\" aria-hidden=\"true\">\n        <svg viewBox=\"0 0 24 24\">\n          <path d=\"M12 3 21 7v5c0 4.5-3.8 7.6-9 10-5.2-2.4-9-5.5-9-10V7l9-4Z\"/>\n          <path d=\"m7 11 3.2 3.2L17 8\"/>\n        </svg>\n      </span>\n\n      <p class=\"nl-trust-text\">\n        RATED EXCELLENT BY 9,700+ HAPPY SHOPPERS\n      </p>\n    </div>\n\n    <!-- RISK-FREE TRIAL -->\n    <div class=\"nl-trust-row\">\n      <span class=\"nl-trust-icon\" aria-hidden=\"true\">\n        <svg viewBox=\"0 0 24 24\">\n          <path d=\"m3 7 12-4 6 3-12 4-6-3Z\"/>\n          <path d=\"M3 7v9l12 5 1-7\"/>\n          <path d=\"m9 10 6 3\"/>\n          <path d=\"M16 14a4 4 0 1 1-1 2.5\"/>\n          <path d=\"M16 12v4h4\"/>\n        </svg>\n      </span>\n\n      <p class=\"nl-trust-text\">\n        30-DAY RISK-FREE TRIAL ON EVERY PAIR\n      </p>\n    </div>\n\n  </div>\n</div>"
+              },
+              "blocks": {}
+            },
             "text_aEtTtq": {
               "type": "text",
               "name": "t:names.product_description",
@@ -860,8 +868,9 @@
             "custom_liquid_YUP8Le",
             "buy_buttons_eYQEYi",
             "text_GPxrE7",
-            "custom_liquid_rVLVrF",
             "accordion_kEfJBd",
+            "custom_liquid_rVLVrF",
+            "custom_liquid_hPAWN8",
             "text_aEtTtq"
           ]
         }
