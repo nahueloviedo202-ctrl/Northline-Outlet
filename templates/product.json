@@ -534,6 +534,14 @@
               },
               "blocks": {}
             },
+            "custom_liquid_YUP8Le": {
+              "type": "custom-liquid",
+              "name": "t:names.custom_liquid",
+              "settings": {
+                "custom_liquid": "<style>\n  .northline-review {\n    display: flex;\n    align-items: center;\n    gap: 15px;\n    width: 100%;\n    max-width: 600px;\n    padding: 15px 17px;\n    background: #f4f4f5;\n    border-radius: 12px;\n    box-sizing: border-box;\n    font-family: inherit;\n    color: #171717;\n  }\n\n  .northline-review * {\n    box-sizing: border-box;\n  }\n\n  .northline-review-photo {\n    width: 78px;\n    height: 78px;\n    flex: 0 0 78px;\n    border-radius: 10px;\n    object-fit: cover;\n    object-position: center;\n    display: block;\n  }\n\n  .northline-review-content {\n    flex: 1;\n    min-width: 0;\n  }\n\n  .northline-review-heading {\n    display: flex;\n    align-items: center;\n    flex-wrap: wrap;\n    gap: 8px;\n    margin-bottom: 6px;\n  }\n\n  .northline-review-name {\n    margin: 0;\n    font-size: 17px;\n    font-weight: 700;\n    line-height: 1.2;\n  }\n\n  .northline-review-stars {\n    color: #111;\n    font-size: 19px;\n    line-height: 1;\n    letter-spacing: 1px;\n    white-space: nowrap;\n  }\n\n  .northline-review-text {\n    margin: 0;\n    font-size: 14.5px;\n    line-height: 1.4;\n    color: #292929;\n  }\n\n  @media (max-width: 420px) {\n    .northline-review {\n      gap: 12px;\n      padding: 12px;\n    }\n\n    .northline-review-photo {\n      width: 65px;\n      height: 65px;\n      flex-basis: 65px;\n    }\n\n    .northline-review-name {\n      font-size: 15px;\n    }\n\n    .northline-review-stars {\n      font-size: 16px;\n    }\n\n    .northline-review-text {\n      font-size: 13px;\n    }\n  }\n</style>\n\n<div class=\"northline-review\">\n\n  <img\n    class=\"northline-review-photo\"\n    src=\"https://imgs.search.brave.com/t-mgAk-_937eymPQ1jyHLNhz5hWJUjFHSDgJdfWnK3M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90by1ncmF0aXMv/Y2hpY2Etc29ucmll/bnRlLWJhbmRlcmEt/YW1lcmljYW5hLW5h/dHVyYWxlemFfMjMt/MjE0NzgyNDUwMC5q/cGc_c2VtdD1haXNf/aHlicmlkJnc9NzQw/JnE9ODA\"\n    alt=\"Customer portrait\"\n    loading=\"lazy\"\n  >\n\n  <div class=\"northline-review-content\">\n\n    <div class=\"northline-review-heading\">\n      <p class=\"northline-review-name\">Olivia</p>\n      <span\n        class=\"northline-review-stars\"\n        role=\"img\"\n        aria-label=\"5 out of 5 stars\"\n      >★★★★★</span>\n    </div>\n\n    <p class=\"northline-review-text\">\n      I'm so happy with my purchase from Northline Outlet!\n      The quality is amazing, everything arrived in great\n      condition.\n      I'll definitely be shopping here again!\n    </p>\n\n  </div>\n</div>"
+              },
+              "blocks": {}
+            },
             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
               "settings": {
@@ -819,6 +827,7 @@
             "kiwi_size_chart_recommender_kiwi_sizing_rKM4wU",
             "product_inventory_dmwFwi",
             "custom_liquid_NpFjKt",
+            "custom_liquid_YUP8Le",
             "buy_buttons_eYQEYi",
             "text_GPxrE7",
             "custom_liquid_rVLVrF",
